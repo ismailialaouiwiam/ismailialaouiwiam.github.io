@@ -1,0 +1,1200 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var l=localStorage.getItem("lang");if(!l){l=(navigator.language||"fr").toLowerCase().indexOf("en")===0?"en":"fr"}document.documentElement.setAttribute("lang",l==="en"?"en":"fr");if(!document.documentElement.getAttribute("data-theme"))document.documentElement.setAttribute("data-theme","dark")}catch(e){document.documentElement.setAttribute("lang","fr")}})();</script>
+<title>Wiam Ismaili Alaoui — Ingénieure Réseaux, Systèmes &amp; Sécurité</title>
+<meta name="description" content="Portfolio de Wiam Ismaili Alaoui, ingénieure d'État Réseaux, Systèmes &amp; Sécurité (ISGA Rabat). Architecture Zero Trust (ZTNA), OPNsense, WireGuard, MPLS L3VPN, haute disponibilité.">
+<meta name="author" content="Wiam Ismaili Alaoui">
+<meta name="theme-color" content="#0a0e16">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wiam Ismaili Alaoui — Ingénieure Réseaux, Systèmes &amp; Sécurité">
+<meta property="og:description" content="Architecture Zero Trust (ZTNA), OPNsense, WireGuard, MPLS L3VPN. Diplômée ISGA Rabat 2026 — PFE au Ministère de l'Agriculture (DIAEA).">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0e16'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='%232dd4bf'%3EWA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0e16; --bg2:#0f1521; --card:#121a29; --card2:#162033; --line:#1f2b40; --line2:#2a3a55;
+  --text:#e7edf7; --muted:#93a1b8; --faint:#667590;
+  --accent:#2dd4bf; --accent2:#60a5fa; --accent-ink:#04201c; --warn:#fbbf24;
+  --glow:rgba(45,212,191,.14); --shadow:0 20px 50px -20px rgba(0,0,0,.6);
+  --radius:16px; --maxw:1120px;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+:root[data-theme="light"]{
+  --bg:#f6f8fb; --bg2:#eef2f7; --card:#ffffff; --card2:#f4f7fb; --line:#e1e7f0; --line2:#cfd8e6;
+  --text:#0e1726; --muted:#4b5b73; --faint:#7a889e;
+  --accent:#0d9488; --accent2:#2563eb; --accent-ink:#ffffff; --warn:#b45309;
+  --glow:rgba(13,148,136,.10); --shadow:0 20px 40px -24px rgba(15,23,42,.25);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.ic{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+section{padding:96px 0;position:relative}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--accent)}
+h2{font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-bottom:14px}
+.lead{color:var(--muted);max-width:680px;font-size:1.05rem}
+.sec-head{margin-bottom:48px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--accent-ink);padding:8px 14px;border-radius:8px;z-index:200}
+.skip:focus{left:8px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* LANGUE */
+html[lang="fr"] .en{display:none}
+html[lang="en"] .fr{display:none}
+.lang-sw{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card);height:38px}
+.lang-sw button{border:0;background:transparent;color:var(--muted);font:600 .78rem var(--mono);letter-spacing:.06em;padding:0 11px;cursor:pointer;transition:.2s}
+.lang-sw button:hover{color:var(--text)}
+.lang-sw button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;backdrop-filter:saturate(1.4) blur(14px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid transparent;transition:border-color .25s}
+.nav.scrolled{border-color:var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em}
+.brand .logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--accent-ink);display:grid;place-items:center;font-size:.8rem;font-weight:800}
+.links{display:flex;gap:4px;align-items:center}
+.links a{padding:8px 12px;border-radius:8px;color:var(--muted);font-size:.92rem;font-weight:500;transition:.2s}
+.links a:hover,.links a.active{color:var(--text);background:var(--card)}
+.nav-actions{display:flex;gap:8px;align-items:center}
+.icon-btn{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);display:grid;place-items:center;cursor:pointer;transition:.2s}
+.icon-btn:hover{border-color:var(--accent);color:var(--accent)}
+#burger{display:none}
+.moon{display:none}
+:root[data-theme="light"] .sun{display:none}
+:root[data-theme="light"] .moon{display:block}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:12px;font-weight:600;font-size:.95rem;border:1px solid var(--line2);background:var(--card);color:var(--text);cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.primary:hover{box-shadow:0 10px 28px -8px var(--accent)}
+.btn.sm{padding:8px 14px;font-size:.85rem;border-radius:10px}
+
+/* HERO */
+#accueil{padding:150px 0 90px;overflow:hidden}
+#accueil::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(900px 420px at 85% -5%,var(--glow),transparent 60%),
+  radial-gradient(700px 380px at -5% 40%,rgba(96,165,250,.08),transparent 60%);pointer-events:none}
+#accueil::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.35;mask-image:radial-gradient(ellipse at 70% 20%,#000 0,transparent 65%);-webkit-mask-image:radial-gradient(ellipse at 70% 20%,#000 0,transparent 65%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative;z-index:1}
+.status{display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border:1px solid var(--line2);border-radius:999px;font-size:.84rem;color:var(--muted);background:var(--card);margin-bottom:26px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 var(--accent);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+h1{font-size:clamp(2.5rem,6vw,4.4rem);line-height:1.04;letter-spacing:-.035em;font-weight:800;margin-bottom:18px}
+h1 .grad{background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--text);font-weight:600;margin-bottom:10px}
+.sub{color:var(--muted);max-width:560px;margin-bottom:30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px}
+.social{display:flex;gap:10px}
+.term{background:var(--card);border:1px solid var(--line2);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;font-family:var(--mono);font-size:.82rem}
+.term-bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--card2)}
+.term-bar i{width:11px;height:11px;border-radius:50%;background:var(--line2)}
+.term-bar span{margin-left:10px;color:var(--faint);font-size:.75rem}
+.term-body{padding:20px 20px 22px;color:var(--muted);line-height:1.9}
+.term-body .p{color:var(--accent)}
+.term-body .k{color:var(--accent2)}
+.term-body .v{color:var(--text)}
+.caret{display:inline-block;width:8px;height:15px;background:var(--accent);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:72px;position:relative;z-index:1}
+.stat{background:var(--card);padding:26px 22px}
+.stat b{display:block;font-size:2rem;font-weight:800;letter-spacing:-.03em;color:var(--text);line-height:1.1}
+.stat b em{font-style:normal;color:var(--accent)}
+.stat span{color:var(--muted);font-size:.88rem}
+
+/* ABOUT */
+#apropos{background:var(--bg2);border-block:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:start}
+.photo{aspect-ratio:4/5;border-radius:20px;border:1px solid var(--line2);background:linear-gradient(160deg,var(--card2),var(--card));display:grid;place-items:center;overflow:hidden;position:relative;box-shadow:var(--shadow)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo .initials{font-size:4.2rem;font-weight:800;letter-spacing:-.04em;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.photo small{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:.68rem;color:var(--faint)}
+.about-text p{color:var(--muted);margin-bottom:16px}
+.about-text p strong{color:var(--text);font-weight:600}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.fact{display:flex;gap:12px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--card);font-size:.92rem}
+.fact .ic{color:var(--accent)}
+.fact small{display:block;color:var(--faint);font-size:.74rem;text-transform:uppercase;letter-spacing:.08em}
+
+/* SKILLS */
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}
+.skill{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:.25s}
+.skill:hover{border-color:var(--line2);transform:translateY(-3px)}
+.skill-h{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.skill-h .ico{width:40px;height:40px;border-radius:11px;background:var(--glow);color:var(--accent);display:grid;place-items:center}
+.skill-h h3{font-size:1.05rem;font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:5px 11px;border-radius:8px;border:1px solid var(--line);background:var(--card2);font-size:.8rem;color:var(--muted);font-family:var(--mono);white-space:nowrap}
+.chip.hl{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
+
+/* PROJECTS */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:34px}
+.filter{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--muted);font-weight:500;font-size:.88rem;cursor:pointer;transition:.2s;font-family:inherit}
+.filter:hover{color:var(--text)}
+.filter.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:600}
+.project{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:38px;margin-bottom:28px;position:relative;overflow:hidden}
+.project.featured{border-color:color-mix(in srgb,var(--accent) 35%,var(--line));background:linear-gradient(180deg,var(--card),var(--card) 60%,color-mix(in srgb,var(--accent) 4%,var(--card)))}
+.project.hide{display:none}
+.p-top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start;margin-bottom:6px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.72rem;padding:4px 10px;border-radius:999px;background:var(--glow);color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);text-transform:uppercase;letter-spacing:.08em}
+.p-meta{font-family:var(--mono);font-size:.78rem;color:var(--faint)}
+.project h3{font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.2;letter-spacing:-.02em;margin:10px 0 12px}
+.p-desc{color:var(--muted);max-width:760px;margin-bottom:26px}
+.p-cols{display:grid;grid-template-columns:1.3fr 1fr;gap:34px;margin-bottom:28px}
+.p-cols h4,.sub-h{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);margin-bottom:14px;font-weight:500}
+.ticks li{position:relative;padding-left:26px;margin-bottom:10px;color:var(--muted);font-size:.95rem}
+.ticks li::before{content:"";position:absolute;left:2px;top:.62em;width:10px;height:6px;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:translateY(-70%) rotate(-45deg)}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px}
+.kpi{border:1px solid var(--line);background:var(--card2);border-radius:12px;padding:14px 16px}
+.kpi b{display:block;font-size:1.35rem;font-weight:800;color:var(--accent);letter-spacing:-.02em;line-height:1.2}
+.kpi span{font-size:.78rem;color:var(--muted)}
+.p-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.arch{margin:6px 0 30px;border:1px solid var(--line);border-radius:16px;background:var(--bg);padding:22px;overflow-x:auto}
+.arch svg{width:100%;min-width:760px;height:auto;display:block}
+.arch figcaption{font-size:.8rem;color:var(--faint);margin-top:12px;font-family:var(--mono)}
+.arch .box{fill:var(--card);stroke:var(--line2);stroke-width:1.2}
+.arch .box.hl{stroke:var(--accent);fill:color-mix(in srgb,var(--accent) 8%,var(--card))}
+.arch .lab{fill:var(--text);font:600 13px var(--sans)}
+.arch .sm{fill:var(--muted);font:400 11px var(--mono)}
+.arch .zone{fill:none;stroke:var(--line2);stroke-dasharray:4 5;stroke-width:1}
+.arch .zt{fill:var(--faint);font:500 10.5px var(--mono);letter-spacing:.12em}
+.arch .ar{stroke:var(--accent);stroke-width:1.5;fill:none}
+.arch .ah{fill:var(--accent)}
+
+/* SHOTS */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.shot{margin:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card2);transition:.25s}
+.shot:not(.empty){cursor:zoom-in}
+.shot:not(.empty):hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow)}
+.shot-frame{aspect-ratio:16/10;position:relative;background:var(--bg);display:grid;place-items:center;overflow:hidden}
+.shot-frame img{width:100%;height:100%;object-fit:cover;object-position:top}
+.ph{display:none;text-align:center;padding:16px;color:var(--faint)}
+.shot.empty .shot-frame{background:repeating-linear-gradient(135deg,var(--card2) 0 12px,var(--bg) 12px 24px);border-bottom:1px dashed var(--line2)}
+.shot.empty .ph{display:block}
+.ph .ic{width:26px;height:26px;margin:0 auto 8px;color:var(--accent);opacity:.8}
+.ph b{display:block;font-size:.8rem;color:var(--muted);font-weight:600;margin-bottom:4px}
+.ph code{font-family:var(--mono);font-size:.68rem;color:var(--faint);word-break:break-all}
+.shot figcaption{padding:12px 14px;font-size:.84rem;color:var(--muted)}
+.shot figcaption b{display:block;color:var(--text);font-weight:600;font-size:.88rem}
+body.hide-empty .shot.empty{display:none}
+body.hide-empty .gallery:not(:has(.shot:not(.empty))){display:none}
+body.hide-empty .gallery-wrap:not(:has(.shot:not(.empty))){display:none}
+.todo-note{display:none}
+body:not(.hide-empty) .todo-note{display:block;margin-top:12px;font-family:var(--mono);font-size:.74rem;color:var(--warn)}
+
+/* TIMELINE */
+.tl{position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--accent),var(--line) 70%)}
+.tl-item{position:relative;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 28px;margin-bottom:20px}
+.tl-item::before{content:"";position:absolute;left:-34px;top:30px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.tl-top{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:4px}
+.tl-item h3{font-size:1.1rem;font-weight:700}
+.tl-item .org{color:var(--accent);font-weight:500;font-size:.92rem}
+.tl-item .when{font-family:var(--mono);font-size:.78rem;color:var(--faint)}
+.tl-item .ticks{margin-top:14px}
+
+/* EDU / CERT */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 28px;margin-bottom:16px}
+.card h3{font-size:1.05rem;font-weight:700;margin-bottom:4px}
+.card .when{font-family:var(--mono);font-size:.78rem;color:var(--faint);display:block;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.93rem}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.cert{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:.25s}
+.cert:hover{border-color:var(--accent);transform:translateY(-3px)}
+.cert .badge-img{width:100%;aspect-ratio:3/1;border-radius:10px;border:1px dashed var(--line2);background:var(--card2);display:grid;place-items:center;overflow:hidden;font-size:.68rem;color:var(--faint);font-family:var(--mono);text-align:center;padding:6px}
+.cert .badge-img img{width:100%;height:100%;object-fit:contain}
+.cert .ico{width:38px;height:38px;border-radius:10px;background:var(--glow);color:var(--accent);display:grid;place-items:center}
+.cert h3{font-size:.98rem;font-weight:700;line-height:1.35}
+.cert p{color:var(--muted);font-size:.85rem}
+.cert .state{margin-top:auto;font-family:var(--mono);font-size:.72rem;color:var(--accent)}
+.cert .state.wip{color:var(--warn)}
+.langs{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.lang{padding:12px 18px;border:1px solid var(--line);border-radius:12px;background:var(--card);font-size:.92rem}
+.lang small{display:block;color:var(--faint);font-size:.74rem}
+
+/* CONTACT */
+#contact{background:var(--bg2);border-top:1px solid var(--line)}
+.contact-box{background:var(--card);border:1px solid var(--line2);border-radius:24px;padding:52px;display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center;position:relative;overflow:hidden}
+.contact-box::before{content:"";position:absolute;right:-120px;top:-120px;width:340px;height:340px;background:radial-gradient(circle,var(--glow),transparent 65%)}
+.c-list{display:grid;gap:12px;position:relative}
+.c-item{display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--card2);transition:.2s}
+.c-item:hover{border-color:var(--accent);transform:translateX(4px)}
+.c-item .ico{width:38px;height:38px;border-radius:10px;background:var(--glow);color:var(--accent);display:grid;place-items:center}
+.c-item small{display:block;color:var(--faint);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
+.c-item span{font-weight:500;word-break:break-all}
+footer{padding:30px 0;border-top:1px solid var(--line);color:var(--faint);font-size:.85rem}
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.to-top{color:var(--muted)}
+.to-top:hover{color:var(--accent)}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;background:rgba(5,8,14,.88);z-index:300;display:none;place-items:center;padding:28px;backdrop-filter:blur(6px)}
+.lb.open{display:grid}
+.lb figure{max-width:min(1200px,100%);max-height:100%;display:flex;flex-direction:column;gap:14px}
+.lb img{max-height:78vh;width:auto;margin:0 auto;border-radius:12px;border:1px solid var(--line2);background:#000}
+.lb figcaption{color:#cbd5e5;text-align:center;font-size:.92rem}
+.lb button{position:absolute;top:18px;right:18px;width:42px;height:42px;border-radius:50%;border:1px solid var(--line2);background:var(--card);color:var(--text);cursor:pointer;font-size:1.3rem;line-height:1}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.dot,.caret{animation:none}html{scroll-behavior:auto}}
+
+/* RESPONSIVE */
+@media (max-width:920px){
+  section{padding:72px 0}
+  .hero-grid,.about-grid,.p-cols,.two,.contact-box{grid-template-columns:1fr}
+  .about-grid .photo{max-width:260px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .links{position:fixed;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 20px 18px;display:none}
+  .links.open{display:flex}
+  .links a{padding:12px}
+  #burger{display:grid}
+  .project{padding:26px 22px}
+  .contact-box{padding:30px 22px}
+  #accueil{padding-top:120px}
+}
+@media (max-width:520px){
+  .facts,.kpis{grid-template-columns:1fr}
+  .skill-grid{grid-template-columns:1fr}
+  .wrap{padding:0 18px}
+  .nav-actions .btn{display:none}
+}
+@media print{
+  .nav,.filters,.lb,.todo-note,#burger{display:none!important}
+  body{background:#fff;color:#000}
+  section{padding:30px 0}
+  .rv{opacity:1;transform:none}
+}
+
+/* DÉMO PORTABLE */
+
+.demo{margin:6px 0 34px}
+.laptop{max-width:880px;margin:0 auto}
+.lid{background:#05080f;border:1px solid #2b3856;border-radius:16px 16px 0 0;padding:1.6% 1.6% 2%;box-shadow:0 30px 80px -40px rgba(45,212,191,.5)}
+.cam{width:6px;height:6px;border-radius:50%;background:#26324d;margin:0 auto 1.1%}
+.screen{position:relative;aspect-ratio:16/10;background:#f3f4f6;border-radius:4px;overflow:hidden;container-type:inline-size;color:#1f2937;font-family:'Inter',system-ui,sans-serif}
+.base{height:14px;background:linear-gradient(#2a3654,#141c30);border-radius:0 0 14px 14px;margin-inline:-3%;position:relative}
+.base::after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:16%;height:5px;background:#0b1120;border-radius:0 0 8px 8px}
+.ui{position:absolute;inset:0;font-size:1.32cqw;line-height:1.4;display:flex;flex-direction:column}
+.boot{position:absolute;inset:0;background:#05080f;color:#e9edf5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4cqw;z-index:6;opacity:0;pointer-events:none;transition:opacity .5s}
+.boot.on{opacity:1}
+.boot b{font-weight:800;font-size:5.4cqw;line-height:1;letter-spacing:-.03em;background:linear-gradient(100deg,#2dd4bf,#60a5fa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.boot i{font-style:normal;font-family:var(--mono);font-size:1.2cqw;letter-spacing:.2em;color:#9aa6bf}
+.bar{width:16cqw;height:.35cqw;background:#1b2540;border-radius:9px;overflow:hidden}
+.bar::after{content:"";display:block;height:100%;width:40%;background:#a9c1ff;border-radius:9px;animation:load 1.1s ease-in-out infinite}
+@keyframes load{0%{transform:translateX(-100%)}100%{transform:translateX(260%)}}
+.top{display:flex;justify-content:space-between;align-items:center;background:#fff;border-bottom:1px solid #e5e7eb;padding:.9em 1.4em;font-weight:600}
+.top small{font-weight:500;color:#6b7280;font-size:.9em}
+.body{flex:1;display:flex;min-height:0}
+.side{width:17%;background:#111827;color:#cbd5e1;padding:1em .6em;display:flex;flex-direction:column;gap:.35em}
+.side button{all:unset;display:block;padding:.6em .8em;border-radius:.4em;font-size:.95em;cursor:pointer}
+.side button.act{background:#2563eb;color:#fff}
+.main{flex:1;padding:1.2em 1.4em;overflow:hidden;position:relative}
+.scene{position:absolute;inset:1.2em 1.4em;opacity:0;transition:opacity .35s;pointer-events:none}
+.scene.on{opacity:1}
+.h{font-weight:700;font-size:1.25em;margin:0 0 .7em}
+.tiles{display:flex;gap:.8em;margin-bottom:1em}
+.tile{flex:1;border-radius:.5em;padding:.8em 1em;color:#fff}
+.tile b{display:block;font-size:1.9em;line-height:1.1}
+.tile span{font-size:.82em;opacity:.9}
+.c-navy{background:#1f2937}.c-red{background:#dc2626}.c-or{background:#f97316}.c-ye{background:#eab308}.c-te{background:#0d9488}
+.d-card{background:#fff;border-radius:.6em;box-shadow:0 1px 3px rgba(0,0,0,.1);padding:.9em 1em}
+.d-card h4{margin:0 0 .5em;font-size:.95em;color:#b91c1c}
+.tb{width:100%;border-collapse:collapse;font-size:.86em}
+.tb th{text-align:left;color:#6b7280;font-weight:600;padding:.35em .5em;background:#f9fafb}
+.tb td{padding:.42em .5em;border-top:1px solid #f1f2f4}
+.tb td:first-child{font-family:var(--mono);font-weight:600;font-size:.95em}
+.tb tr.hot td{background:#fef2f2}
+.pill{display:inline-block;color:#fff;border-radius:.35em;padding:.1em .55em;font-size:.86em;font-weight:600;white-space:nowrap}
+.meter{display:inline-block;width:6em;height:.32em;background:#e5e7eb;border-radius:9px;overflow:hidden;vertical-align:middle;margin-right:.5em}
+.meter i{display:block;height:100%}
+.note-ok{background:#dcfce7;color:#166534;border-radius:.4em;padding:.55em .8em;font-size:.9em;margin-bottom:.8em;opacity:0;transition:opacity .4s}
+.note-ok.on{opacity:1}
+.dbtn{display:inline-block;background:#dc2626;color:#fff;border-radius:.4em;padding:.5em 1em;font-weight:600;font-size:.9em;margin-top:.7em;transition:transform .12s}
+.dbtn.press{transform:scale(.95)}
+.dbtn.blue{background:#2563eb}
+.login{position:absolute;inset:0;background:#f3f4f6;display:flex;align-items:center;justify-content:center;z-index:4;opacity:0;pointer-events:none;transition:opacity .35s}
+.login.on{opacity:1}
+.lcard{width:36%;background:#fff;border-radius:.7em;box-shadow:0 4px 18px rgba(0,0,0,.1);padding:1.6em}
+.lcard h5{margin:0 0 1em;font-size:1.1em}
+.lcard label{display:block;font-size:.82em;color:#4b5563;margin:.7em 0 .25em}
+.field{border:1px solid #d1d5db;border-radius:.4em;padding:.5em .65em;min-height:2.3em;font-family:var(--mono);font-size:.92em;background:#fff}
+.field.focus{border-color:#2563eb;box-shadow:0 0 0 .15em rgba(37,99,235,.2)}
+.mfa-step{display:none}
+.login.mfa .pw-step{display:none}
+.login.mfa .mfa-step{display:block}
+.cursor{position:absolute;left:60%;top:70%;z-index:9;width:1.9cqw;height:1.9cqw;transition:left .8s cubic-bezier(.4,0,.2,1),top .8s cubic-bezier(.4,0,.2,1);pointer-events:none;filter:drop-shadow(0 1px 1px rgba(0,0,0,.4))}
+.cursor svg{width:100%;height:100%}
+.cursor.click::after{content:"";position:absolute;left:-40%;top:-40%;width:120%;height:120%;border-radius:50%;border:2px solid #2563eb;animation:ping .45s ease-out}
+@keyframes ping{from{transform:scale(.3);opacity:1}to{transform:scale(1.3);opacity:0}}
+.steps{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:22px}
+.steps button{font-family:var(--mono);font-size:12.5px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--muted);cursor:pointer}
+.steps button[aria-pressed="true"]{border-color:var(--accent);color:var(--text);background:var(--card2)}
+.demo-cap{text-align:center;color:var(--muted);font-size:14px;margin-top:12px}
+@media (prefers-reduced-motion:reduce){.cursor,.scene,.login,.boot,.note-ok{transition:none}.bar::after{animation:none}}
+
+
+
+/* DÉMOS DES AUTRES PROJETS */
+.demo.small .laptop{max-width:640px}
+.demo.small{margin:4px 0 30px}
+[data-demo=mpls] .cursor,[data-demo=ha] .cursor,[data-demo=fekra] .cursor{display:none}
+.dk{position:absolute;inset:0;background:#0b1220;color:#dbe4f3;font-size:1.95cqw;line-height:1.45;display:flex}
+.topo{position:relative;flex:1.55;border-right:1px solid #1f2b40}
+.topo svg{position:absolute;inset:0;width:100%;height:100%}
+.topo line{stroke:#3a4b6b;stroke-width:.5;transition:stroke .4s,opacity .4s}
+.topo line.ok{stroke:#2dd4bf}
+.topo line.down{stroke:#ef4444;stroke-dasharray:1.5 1.5}
+.topo line.tun{stroke-dasharray:2 1.6}
+.nd{position:absolute;transform:translate(-50%,-50%);background:#121a29;border:1px solid #2a3a55;border-radius:.6em;padding:.35em .7em;text-align:center;font-weight:600;white-space:nowrap;transition:border-color .4s,background .4s}
+.nd small{display:block;font-family:var(--mono);font-weight:400;font-size:.72em;color:#93a1b8}
+.nd.hl{border-color:#2dd4bf;background:#0f2a2a}
+.nd.bad{border-color:#ef4444;background:#2a1215}
+.pkt{position:absolute;width:1.5cqw;height:1.5cqw;border-radius:50%;background:#2dd4bf;transform:translate(-50%,-50%);box-shadow:0 0 1.2cqw #2dd4bf;opacity:0;transition:left .7s linear,top .7s linear,opacity .25s,background .25s}
+.pkt.on{opacity:1}
+.pkt.red{background:#ef4444;box-shadow:0 0 1.2cqw #ef4444}
+.tm{flex:1;padding:1em 1.1em;font-family:var(--mono);font-size:.86em;color:#93a1b8;display:flex;flex-direction:column;gap:.2em;min-width:0}
+.tm b{color:#e7edf7;font-weight:500}
+.tm .g{color:#2dd4bf}.tm .r{color:#f87171}
+.tm-h{font-size:.82em;letter-spacing:.12em;text-transform:uppercase;color:#667590;margin-bottom:.5em}
+.st{position:absolute;left:1em;bottom:.9em;font-size:.86em;padding:.3em .8em;border-radius:99px;background:#121a29;border:1px solid #2a3a55;transition:all .3s}
+.st.g{border-color:#2dd4bf;color:#2dd4bf}.st.r{border-color:#ef4444;color:#f87171}
+
+.topo.mp .nd{font-size:.82em;padding:.25em .55em}
+.topo.mp .nd.pe{border-color:#5eead4}
+.nd.ca{border-color:#60a5fa;color:#bfdbfe}.nd.cb{border-color:#fbbf24;color:#fde68a}.nd.cc{border-color:#f472b6;color:#fbcfe8}
+.nd.on{box-shadow:0 0 0 .25em rgba(255,255,255,.35)}
+.nd.okn{background:#0f2a2a;border-color:#2dd4bf;color:#99f6e4;box-shadow:0 0 0 .22em rgba(45,212,191,.3)}
+.topo.mp .nd.bad{border-color:#ef4444;background:#2a1215;color:#fecaca}
+.topo.mp .nd.okn{border-color:#2dd4bf;background:#0f2a2a;color:#99f6e4}
+.pkt.lock{background:#c084fc;box-shadow:0 0 1.2cqw #c084fc}
+/* boutique + freelance */
+.lt{position:absolute;inset:0;background:#f5f6f8;color:#1f2937;font-size:1.85cqw;line-height:1.4;display:flex;flex-direction:column}
+.lt-top{display:flex;align-items:center;gap:1em;background:#fff;border-bottom:1px solid #e5e7eb;padding:.75em 1.2em;font-weight:700}
+.sbar{flex:1;border:1px solid #d1d5db;border-radius:99px;padding:.45em 1em;font-weight:400;font-size:.92em;min-height:2.1em;background:#fff;color:#111827}
+.sbar.focus{border-color:#0d9488;box-shadow:0 0 0 .15em rgba(13,148,136,.2)}
+.sgo{background:#0d9488;color:#fff;border-radius:99px;padding:.45em 1.1em;font-size:.9em;font-weight:600}
+.lt-b{flex:1;padding:1em 1.2em;position:relative;min-height:0}
+.und{display:flex;flex-wrap:wrap;gap:.5em;align-items:center;font-size:.86em;margin-bottom:.9em;opacity:0;transition:opacity .4s}
+.und.on{opacity:1}
+.und span{background:#ccfbf1;color:#115e59;border-radius:99px;padding:.15em .7em;font-family:var(--mono);font-size:.92em}
+.prods{display:grid;grid-template-columns:repeat(3,1fr);gap:.9em}
+.prod{background:#fff;border-radius:.6em;box-shadow:0 1px 3px rgba(0,0,0,.1);padding:.7em;opacity:0;transform:translateY(.6em);transition:opacity .4s,transform .4s}
+.prod.on{opacity:1;transform:none}
+.prod i{display:block;aspect-ratio:16/10;border-radius:.4em;margin-bottom:.5em}
+.prod b{display:block;font-size:.92em}.prod em{font-style:normal;color:#0d9488;font-weight:700;font-size:.9em}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:1em}
+.col h6{margin:0 0 .5em;font-size:.95em;display:flex;justify-content:space-between;align-items:center}
+.mini{background:#0d9488;color:#fff;border-radius:.4em;padding:.25em .7em;font-size:.82em;font-weight:600;transition:transform .12s}
+.mini.press{transform:scale(.94)}
+.it{background:#fff;border-radius:.5em;box-shadow:0 1px 3px rgba(0,0,0,.1);padding:.55em .75em;margin-bottom:.5em;font-size:.9em}
+.it small{display:block;color:#6b7280;font-size:.86em}
+.it.new{outline:2px solid #2dd4bf;animation:pop .5s ease}
+@keyframes pop{from{transform:scale(.92);opacity:0}to{transform:none;opacity:1}}
+.modal{position:absolute;inset:0;background:rgba(15,23,42,.45);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+.modal.on{opacity:1}
+.modal > div{background:#fff;border-radius:.7em;padding:1.2em;width:46%}
+.modal h6{margin:0 0 .7em;font-size:1em}
+/* téléphone */
+.phone{width:min(230px,60%);margin:0 auto;background:#05080f;border:1px solid #2b3856;border-radius:30px;padding:10px;box-shadow:0 30px 80px -40px rgba(45,212,191,.5)}
+.pscreen{position:relative;aspect-ratio:9/17;border-radius:22px;overflow:hidden;container-type:inline-size;background:#0b1220;color:#e7edf7;font-family:'Inter',system-ui,sans-serif}
+.pui{position:absolute;inset:0;font-size:5.6cqw;line-height:1.4;padding:1.4em 1.1em;display:flex;flex-direction:column;align-items:center;gap:1em}
+.pui h6{margin:0;font-size:1.1em;align-self:flex-start}
+.ring{width:42%;aspect-ratio:1;border-radius:50%;border:.35em solid #2a3a55;display:grid;place-items:center;font-size:.78em;font-weight:600;color:#93a1b8;transition:all .5s;text-align:center}
+.ring.wait{border-color:#fbbf24;color:#fbbf24}
+.ring.ok{border-color:#2dd4bf;color:#2dd4bf;box-shadow:0 0 2em rgba(45,212,191,.35)}
+.srv{width:100%;display:flex;flex-direction:column;gap:.45em}
+.srv div{border:1px solid #2a3a55;border-radius:.6em;padding:.5em .8em;font-size:.86em;display:flex;justify-content:space-between;transition:all .3s}
+.srv div.sel{border-color:#2dd4bf;background:#0f2a2a}
+.srv small{color:#93a1b8}
+.pbtn{width:100%;text-align:center;background:#2dd4bf;color:#04201c;border-radius:.7em;padding:.6em;font-weight:700;font-size:.92em;transition:transform .12s}
+.pbtn.press{transform:scale(.96)}
+.pmsg{font-family:var(--mono);font-size:.7em;color:#93a1b8;min-height:2.6em;text-align:center}
+.pscreen .cursor{width:9cqw;height:9cqw}
+@media (prefers-reduced-motion:reduce){.pkt,.prod,.und,.modal,.ring{transition:none}.it.new{animation:none}}
+
+
+.mx-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card2)}
+.mx{border-collapse:collapse;width:100%;min-width:520px;font-family:var(--mono);font-size:.82rem;text-align:center}
+.mx th,.mx td{padding:9px 6px;border-bottom:1px solid var(--line)}
+.mx thead th{color:var(--faint);font-weight:500}
+.mx tbody th{color:var(--text);font-weight:600;text-align:left;padding-left:16px}
+.mx tr:last-child td,.mx tr:last-child th{border-bottom:0}
+.mx .y{color:var(--accent);font-weight:700;background:color-mix(in srgb,var(--accent) 9%,transparent)}
+.mx .n{color:var(--faint)}
+.mx .self{color:var(--line2)}
+.mx-note{font-size:.86rem;color:var(--muted);margin-top:10px}
+
+.brand span:last-child{white-space:nowrap}
+.links a{padding:8px 9px;white-space:nowrap}
+@media (max-width:1180px){.brand span:last-child{display:none}}
+</style>
+</head>
+<body class="">
+<a class="skip" href="#main"><span class="fr">Aller au contenu</span><span class="en">Skip to content</span></a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-dl" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+    <symbol id="i-gh" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-img" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-net" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4M5 16v-4h14v4"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></symbol>
+  </defs>
+</svg>
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#accueil" class="brand" aria-label="Accueil" data-l="aria-label" data-fr="Accueil" data-en="Home"><span class="logo">WA</span><span>Wiam Ismaili Alaoui</span></a>
+    <nav class="links" id="links" aria-label="Navigation principale" data-l="aria-label" data-fr="Navigation principale" data-en="Main navigation">
+      <a href="#apropos"><span class="fr">À propos</span><span class="en">About</span></a>
+      <a href="#competences"><span class="fr">Compétences</span><span class="en">Skills</span></a>
+      <a href="#projets"><span class="fr">Projets</span><span class="en">Projects</span></a>
+      <a href="#parcours"><span class="fr">Expérience</span><span class="en">Experience</span></a>
+      <a href="#formation"><span class="fr">Formation</span><span class="en">Education</span></a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-sw" role="group" aria-label="Langue / Language"><button type="button" data-lang="fr" aria-pressed="true" lang="fr">FR</button><button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button></div>
+      <a class="btn primary sm" href="assets/CV_Wiaam_Ismaili_Alaoui_ATS.pdf" download><svg class="ic"><use href="#i-dl"/></svg>CV</a>
+      <button class="icon-btn" id="theme" aria-label="Changer de thème" data-l="aria-label" data-fr="Changer de thème" data-en="Toggle theme"><svg class="ic sun"><use href="#i-sun"/></svg><svg class="ic moon"><use href="#i-moon"/></svg></button>
+      <button class="icon-btn" id="burger" aria-label="Menu" aria-expanded="false"><svg class="ic"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section id="accueil">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="rv">
+        <div class="status"><span class="dot"></span><span class="fr">Ingénieure d'État diplômée · ISGA Rabat 2026</span><span class="en">Engineering graduate · ISGA Rabat 2026</span></div>
+        <h1>Wiam<br><span class="grad">Ismaili Alaoui</span></h1>
+        <p class="role"><span class="fr">Ingénieure Réseaux, Systèmes &amp; Sécurité</span><span class="en">Network, Systems &amp; Security Engineer</span></p>
+        <p class="sub"><span class="fr">Je conçois et sécurise des infrastructures réseau : architecture Zero Trust, pare-feu OPNsense, micro-segmentation, VPN et MPLS. PFE réalisé au <strong>Ministère de l'Agriculture (DIAEA)</strong>.</span><span class="en">I design and secure network infrastructures: Zero Trust architecture, OPNsense firewall, micro-segmentation, VPN and MPLS. Final-year project completed at the <strong>Ministry of Agriculture (DIAEA)</strong>.</span></p>
+        <div class="cta">
+          <a class="btn primary" href="#projets"><span class="fr">Voir mes projets</span><span class="en">View my projects</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+          <a class="btn" href="assets/CV_Wiaam_Ismaili_Alaoui_ATS.pdf" download><svg class="ic"><use href="#i-dl"/></svg><span class="fr">Télécharger le CV</span><span class="en">Download CV</span></a>
+          <a class="btn" href="#contact"><svg class="ic"><use href="#i-mail"/></svg><span class="fr">Me contacter</span><span class="en">Contact me</span></a>
+        </div>
+        <div class="social">
+          <a class="icon-btn" href="https://github.com/ismailialaouiwiam" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic"><use href="#i-gh"/></svg></a>
+          <span class="icon-btn" style="opacity:.45;cursor:default" title="LinkedIn : lien à venir" aria-label="LinkedIn (lien à venir)"><svg class="ic"><use href="#i-in"/></svg></span>
+          <a class="icon-btn" href="mailto:ismailialaouiwiam@gmail.com" aria-label="E-mail"><svg class="ic"><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
+      <div class="rv" aria-hidden="true">
+        <div class="term">
+          <div class="term-bar"><i></i><i></i><i></i><span>wiam@ztna-lab: ~</span></div>
+          <div class="term-body">
+            <div><span class="p">$</span> <span class="v">whoami</span></div>
+            <div><span class="fr">wiam.ismaili — ingénieure réseaux, systèmes &amp; sécurité</span><span class="en">wiam.ismaili — network, systems &amp; security engineer</span></div>
+            <div><span class="p">$</span> <span class="v">cat stack.txt</span></div>
+            <div><span class="k">zero-trust</span> ZTNA · MFA · RBAC</div>
+            <div><span class="k">firewall</span>   OPNsense · 14 VLANs</div>
+            <div><span class="k">vpn</span>        WireGuard · IPsec · OpenVPN</div>
+            <div><span class="k"><span class="fr">réseau</span><span class="en">network</span></span>     MPLS L3VPN · OSPF · VRRP</div>
+            <div><span class="k">soc</span>        <span class="fr">supervision · blocage auto</span><span class="en">monitoring · auto-blocking</span></div>
+            <div><span class="p">$</span> <span class="caret"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="stats rv">
+      <div class="stat"><b>14</b><span><span class="fr">VLANs segmentés sous OPNsense avec une politique « deny all »</span><span class="en">VLANs segmented on OPNsense with a “deny all” policy</span></span></div>
+      <div class="stat"><b>997<em>/1000</em></b><span><span class="fr">ports filtrés lors du scan Nmap de validation</span><span class="en">ports filtered in the Nmap validation scan</span></span></div>
+      <div class="stat"><b>4</b><span><span class="fr">stages : Ministère de l'Agriculture, ISGA, Groupe OCP et Fekra Systems</span><span class="en">internships: Ministry of Agriculture, ISGA, OCP Group and Fekra Systems</span></span></div>
+      <div class="stat"><b>2026</b><span><span class="fr">Diplôme d'Ingénieur d'État, ISGA Rabat</span><span class="en">State Engineering Degree, ISGA Rabat</span></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="apropos">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow"><span class="fr">À propos</span><span class="en">About</span></div><h2><span class="fr">Réseaux sécurisés, accès maîtrisés.</span><span class="en">Secure networks, controlled access.</span></h2></div>
+    <div class="about-grid">
+      <div class="photo rv">
+        <img src="assets/photo.jpg" alt="Portrait de Wiam Ismaili Alaoui" onerror="this.remove()">
+        <span class="initials">WA</span>
+      </div>
+      <div class="about-text rv">
+        <p><span class="fr">Ingénieure d'État en <strong>Réseaux, Systèmes et Sécurité</strong>, diplômée de l'<strong>ISGA Rabat</strong>. Compétences en conception et sécurisation d'infrastructures : architecture <strong>Zero Trust (ZTNA)</strong>, pare-feu <strong>OPNsense</strong>, micro-segmentation par VLAN, VPN (<strong>WireGuard, IPsec, OpenVPN</strong>), <strong>MPLS L3VPN multi-VRF</strong> et haute disponibilité (VRRP, IP SLA).</span><span class="en">State Engineer in <strong>Networks, Systems and Security</strong>, graduate of <strong>ISGA Rabat</strong>. Skilled in designing and securing infrastructures: <strong>Zero Trust (ZTNA)</strong> architecture, <strong>OPNsense</strong> firewall, VLAN micro-segmentation, VPN (<strong>WireGuard, IPsec, OpenVPN</strong>), <strong>multi-VRF MPLS L3VPN</strong> and high availability (VRRP, IP SLA).</span></p>
+        <p><span class="fr">Mon projet de fin d'études, réalisé au <strong>Ministère de l'Agriculture (DIAEA)</strong>, m'a permis de construire une architecture Zero Trust complète : accès distant chiffré, réseau segmenté en 14 VLANs, <strong>tableau de bord SOC</strong> et <strong>réponse automatisée aux incidents</strong>.</span><span class="en">My final-year project at the <strong>Ministry of Agriculture (DIAEA)</strong> let me build a complete Zero Trust architecture: encrypted remote access, a network segmented into 14 VLANs, a <strong>SOC dashboard</strong> and <strong>automated incident response</strong>.</span></p>
+        <p><span class="fr">Ce profil est complété par l'administration Linux et le développement web (Laravel).</span><span class="en">This profile is complemented by Linux administration and web development (Laravel).</span></p>
+        <div class="facts">
+          <div class="fact"><svg class="ic"><use href="#i-pin"/></svg><div><small><span class="fr">Localisation</span><span class="en">Location</span></small><span class="fr">Salé, Maroc</span><span class="en">Salé, Morocco</span></div></div>
+          <div class="fact"><svg class="ic"><use href="#i-cap"/></svg><div><small><span class="fr">Diplôme</span><span class="en">Degree</span></small><span class="fr">Ingénieure d'État — ISGA</span><span class="en">State Engineer — ISGA</span></div></div>
+          <div class="fact"><svg class="ic"><use href="#i-shield"/></svg><div><small><span class="fr">Domaine</span><span class="en">Focus</span></small><span class="fr">Zero Trust · Réseaux · SOC</span><span class="en">Zero Trust · Networking · SOC</span></div></div>
+          <div class="fact"><svg class="ic"><use href="#i-award"/></svg><div><small><span class="fr">Langues</span><span class="en">Languages</span></small><span class="fr">Arabe · Français · Anglais</span><span class="en">Arabic · French · English</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="competences">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow"><span class="fr">Compétences</span><span class="en">Skills</span></div><h2><span class="fr">Compétences techniques.</span><span class="en">Technical skills.</span></h2><p class="lead"><span class="fr">De la couche réseau à la supervision de la sécurité.</span><span class="en">From the network layer to security monitoring.</span></p></div>
+    <div class="skill-grid">
+<div class="skill rv"><div class="skill-h"><span class="ico"><svg class="ic"><use href="#i-shield"/></svg></span><h3><span class="fr">Sécurité</span><span class="en">Security</span></h3></div><div class="chips"><span class="chip hl">Zero Trust (ZTNA)</span><span class="chip">NIST SP 800-207</span><span class="chip hl">OPNsense</span><span class="chip">Micro-segmentation</span><span class="chip hl">MFA (TOTP)</span><span class="chip">RBAC</span><span class="chip">ACL</span><span class="chip">SSL/TLS</span><span class="chip"><span class="fr">Certificats</span><span class="en">Certificates</span></span><span class="chip"><span class="fr">Cryptographie</span><span class="en">Cryptography</span></span><span class="chip"><span class="fr">Analyse des vulnérabilités</span><span class="en">Vulnerability analysis</span></span><span class="chip"><span class="fr">SOC (tableau de bord)</span><span class="en">SOC (dashboard)</span></span><span class="chip"><span class="fr">Supervision et journalisation des attaques</span><span class="en">Attack monitoring and logging</span></span><span class="chip"><span class="fr">Réponse automatisée</span><span class="en">Automated response</span></span><span class="chip"><span class="fr">Authentification MD5 (OSPF, LDP, BGP)</span><span class="en">MD5 authentication (OSPF, LDP, BGP)</span></span><span class="chip"><span class="fr">Chiffrement IPsec</span><span class="en">IPsec encryption</span></span></div></div>
+<div class="skill rv"><div class="skill-h"><span class="ico"><svg class="ic"><use href="#i-net"/></svg></span><h3><span class="fr">Réseaux</span><span class="en">Networking</span></h3></div><div class="chips"><span class="chip">TCP/IP</span><span class="chip">IPv4 / IPv6</span><span class="chip">VLAN (802.1Q)</span><span class="chip"><span class="fr">Routage inter-VLAN</span><span class="en">Inter-VLAN routing</span></span><span class="chip">DHCP</span><span class="chip hl">OSPF</span><span class="chip">EIGRP</span><span class="chip">RIP</span><span class="chip hl">MPLS L3VPN (multi-VRF)</span><span class="chip">VRF</span><span class="chip">MP-BGP (VPNv4)</span><span class="chip">LDP</span><span class="chip">GNS3</span><span class="chip">VoIP</span><span class="chip">CDP</span><span class="chip hl">WireGuard</span><span class="chip">IPsec</span><span class="chip">OpenVPN</span></div></div>
+<div class="skill rv"><div class="skill-h"><span class="ico"><svg class="ic"><use href="#i-up"/></svg></span><h3><span class="fr">Haute disponibilité</span><span class="en">High availability</span></h3></div><div class="chips"><span class="chip">HSRP</span><span class="chip hl">VRRP</span><span class="chip">IP SLA</span></div></div>
+<div class="skill rv"><div class="skill-h"><span class="ico"><svg class="ic"><use href="#i-award"/></svg></span><h3><span class="fr">Tests d'intrusion</span><span class="en">Penetration testing</span></h3></div><div class="chips"><span class="chip hl">Kali Linux</span><span class="chip">Nmap</span></div></div>
+<div class="skill rv"><div class="skill-h"><span class="ico"><svg class="ic"><use href="#i-server"/></svg></span><h3><span class="fr">Systèmes &amp; Virtualisation</span><span class="en">Systems &amp; Virtualization</span></h3></div><div class="chips"><span class="chip hl"><span class="fr">Linux (administration)</span><span class="en">Linux (administration)</span></span><span class="chip">Bash</span><span class="chip">VirtualBox</span><span class="chip">WSL2</span><span class="chip hl">Docker</span><span class="chip">Docker Compose</span></div></div>
+<div class="skill rv"><div class="skill-h"><span class="ico"><svg class="ic"><use href="#i-code"/></svg></span><h3><span class="fr">Développement &amp; Data</span><span class="en">Development &amp; Data</span></h3></div><div class="chips"><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span><span class="chip">PHP</span><span class="chip hl">Laravel</span><span class="chip">Flutter</span><span class="chip">Java (Android)</span><span class="chip">API REST</span><span class="chip hl">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">MySQL</span><span class="chip">MongoDB</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projets" style="background:var(--bg2);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow"><span class="fr">Projets</span><span class="en">Projects</span></div><h2><span class="fr">Réalisations techniques.</span><span class="en">Technical work.</span></h2><p class="lead"><span class="fr">Mes projets de stage, puis mes autres projets techniques. Cliquez sur une capture pour l'agrandir.</span><span class="en">My internship projects, then my other technical projects. Click a screenshot to enlarge it.</span></p></div>
+    <div class="filters rv" role="tablist" aria-label="Filtrer les projets" data-l="aria-label" data-fr="Filtrer les projets" data-en="Filter projects">
+      <button class="filter on" data-f="all"><span class="fr">Tous</span><span class="en">All</span></button>
+      <button class="filter" data-f="secu"><span class="fr">Sécurité</span><span class="en">Security</span></button>
+      <button class="filter" data-f="reseau"><span class="fr">Réseaux</span><span class="en">Networking</span></button>
+      <button class="filter" data-f="dev"><span class="fr">Développement</span><span class="en">Development</span></button>
+    </div>
+    <article class="project rv featured" id="p-ztna" data-cat="secu reseau">
+      <div class="p-top"><span class="badge"><span class="fr">Projet de fin d'études</span><span class="en">Final-year project</span></span><span class="p-meta"><span class="fr">Ministère de l'Agriculture (DIAEA), Rabat · 2026 · 4 mois</span><span class="en">Ministry of Agriculture (DIAEA), Rabat · 2026 · 4 months</span></span></div>
+      <h3><span class="fr">Architecture Zero Trust Network Access (ZTNA)</span><span class="en">Zero Trust Network Access (ZTNA) architecture</span></h3>
+      <p class="p-desc"><span class="fr">Conception et mise en œuvre d'une architecture Zero Trust : accès distant chiffré, micro-segmentation du réseau, contrôle d'accès renforcé, tableau de bord SOC et réponse automatisée aux incidents.</span><span class="en">Design and implementation of a Zero Trust architecture: encrypted remote access, network micro-segmentation, strengthened access control, SOC dashboard and automated incident response.</span></p>
+      <div class="sub-h"><span class="fr">Démo de la plateforme</span><span class="en">Platform demo</span></div>
+      
+<div class="demo">
+  <div class="laptop">
+    <div class="lid"><div class="cam"></div>
+      <div class="screen" id="screen" aria-label="Démo animée de la plateforme ZTNA">
+        <div class="ui">
+          <div class="top"><span>ZTNA · SOC</span><small>Admin ▾</small></div>
+          <div class="body">
+            <div class="side">
+              <button type="button" data-go="monitor" class="act">Surveillance</button>
+              <button type="button" data-go="risk">Risk Scoring</button>
+              <button type="button" data-go="block">Blocage</button>
+            </div>
+            <div class="main">
+              <div class="scene on" data-s="monitor">
+                <p class="h">Surveillance temps réel — Pare-feu OPNsense</p>
+                <div class="tiles">
+                  <div class="tile c-navy"><b>403</b><span>Paquets d'attaque enregistrés</span></div>
+                  <div class="tile c-red"><b>5</b><span>Attaques détectées</span></div>
+                  <div class="tile c-or"><b>4</b><span>Sources attaquantes</span></div>
+                </div>
+                <div class="d-card"><h4>Attaques détectées par type</h4>
+                  <table class="tb"><tr><th>Source</th><th>Type d'attaque</th><th>Détail</th><th>Volume</th></tr>
+                  <tr class="hot" id="row-dos"><td>185.220.101.34</td><td><span class="pill" style="background:#dc2626">Déni de service (DoS / SYN flood)</span></td><td>300 paquets vers le port 3306</td><td><b>300</b></td></tr>
+                  <tr><td>45.83.12.7</td><td><span class="pill" style="background:#b91c1c">Force brute SSH</span></td><td>30 tentatives sur le port 22</td><td><b>30</b></td></tr>
+                  <tr><td>45.83.12.7</td><td><span class="pill" style="background:#db2777">Force brute RDP</span></td><td>30 tentatives sur le port 3389</td><td><b>30</b></td></tr>
+                  <tr><td>103.145.13.90</td><td><span class="pill" style="background:#be123c">Force brute FTP</span></td><td>25 tentatives sur le port 21</td><td><b>25</b></td></tr>
+                  <tr><td>192.168.56.1</td><td><span class="pill" style="background:#f97316">Tentative d'accès non autorisé</span></td><td>SSH, FTP, RDP, MySQL, SMB</td><td><b>18</b></td></tr>
+                  </table></div>
+              </div>
+              <div class="scene" data-s="risk">
+                <p class="h">Risk Scoring Engine — ZTNA</p>
+                <div class="tiles">
+                  <div class="tile c-red"><b>1</b><span>Sources CRITICAL</span></div>
+                  <div class="tile c-or"><b>1</b><span>Sources HIGH</span></div>
+                  <div class="tile c-ye"><b>2</b><span>Sources MEDIUM</span></div>
+                  <div class="tile c-te"><b>4</b><span>Sources détectées</span></div>
+                </div>
+                <div class="d-card"><h4>Sources attaquantes détectées (temps réel)</h4>
+                  <table class="tb"><tr><th>Source</th><th>Échecs auth.</th><th>Ports sondés</th><th>Score</th><th>Niveau</th></tr>
+                  <tr class="hot" id="row-crit"><td>185.220.101.34</td><td>0</td><td>1</td><td><span class="meter"><i style="width:90%;background:#dc2626"></i></span>90/100</td><td><span class="pill" style="background:#dc2626">CRITICAL</span></td></tr>
+                  <tr><td>45.83.12.7</td><td>60</td><td>2</td><td><span class="meter"><i style="width:70%;background:#f97316"></i></span>70/100</td><td><span class="pill" style="background:#f97316">HIGH</span></td></tr>
+                  <tr><td>192.168.56.1</td><td>8</td><td>7</td><td><span class="meter"><i style="width:40%;background:#eab308"></i></span>40/100</td><td><span class="pill" style="background:#eab308">MEDIUM</span></td></tr>
+                  <tr><td>103.145.13.90</td><td>25</td><td>1</td><td><span class="meter"><i style="width:35%;background:#eab308"></i></span>35/100</td><td><span class="pill" style="background:#eab308">MEDIUM</span></td></tr>
+                  </table></div>
+              </div>
+              <div class="scene" data-s="block">
+                <div class="note-ok" id="ok">1 hôte(s) bloqué(s) sur le pare-feu : 192.168.70.7</div>
+                <p class="h">Boucle de décision continue</p>
+                <div class="tiles">
+                  <div class="tile c-red"><b>1</b><span>Hôtes au niveau CRITICAL</span></div>
+                  <div class="tile c-navy"><b id="nblk">1</b><span>Hôtes bloqués sur le pare-feu</span></div>
+                </div>
+                <div class="d-card"><h4>Hôtes détectés au niveau CRITICAL</h4>
+                  <table class="tb"><tr><th>Hôte</th><th>VLAN</th><th>Score</th><th>État pare-feu</th></tr>
+                  <tr class="hot"><td>192.168.70.7</td><td>Quarantaine</td><td>91/100</td><td id="state"><span class="pill" style="background:#f97316">À BLOQUER</span></td></tr></table>
+                  <span class="dbtn" id="apply">Appliquer le blocage automatique</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="login" id="login">
+          <div class="lcard">
+            <div class="pw-step">
+              <h5>Connexion — Portail ZTNA</h5>
+              <label>Email</label><div class="field" id="f-mail"></div>
+              <label>Mot de passe</label><div class="field" id="f-pw"></div>
+              <span class="dbtn blue" id="b-login">Se connecter</span>
+            </div>
+            <div class="mfa-step">
+              <h5>Vérification en deux étapes</h5>
+              <label>Code à 6 chiffres (application d'authentification)</label><div class="field" id="f-code"></div>
+              <span class="dbtn blue" id="b-verify">Vérifier</span>
+            </div>
+          </div>
+        </div>
+        <div class="boot" id="boot"><b>WA</b><i>ZTNA PLATFORM</i><div class="bar"></div></div>
+        <div class="cursor" id="cursor"><svg viewBox="0 0 24 24"><path d="M4 2l15 9-7 1.6L9 20z" fill="#111827" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+      </div>
+    </div>
+    <div class="base"></div>
+  </div>
+  <div class="steps" role="group" aria-label="Étapes de la démo">
+    <button type="button" data-step="login" aria-pressed="false"><span class="fr">1 · Connexion MFA</span><span class="en">1 · MFA login</span></button>
+    <button type="button" data-step="monitor" aria-pressed="true"><span class="fr">2 · Supervision</span><span class="en">2 · Monitoring</span></button>
+    <button type="button" data-step="risk" aria-pressed="false"><span class="fr">3 · Score de risque</span><span class="en">3 · Risk score</span></button>
+    <button type="button" data-step="block" aria-pressed="false"><span class="fr">4 · Blocage automatique</span><span class="en">4 · Automatic blocking</span></button>
+    <button type="button" id="replay" aria-pressed="false"><span class="fr">↻ Rejouer</span><span class="en">↻ Replay</span></button>
+  </div>
+  <p class="demo-cap"><span class="fr">Démo animée, recréée d'après les écrans réels de la plateforme.</span><span class="en">Animated demo, recreated from the platform's real screens.</span></p>
+</div>
+
+      <div class="p-cols">
+        <div><h4><span class="fr">Réalisations</span><span class="en">Highlights</span></h4><ul class="ticks"><li><span class="fr">Architecture ZTNA avec accès distant chiffré via un tunnel WireGuard.</span><span class="en">ZTNA architecture with encrypted remote access through a WireGuard tunnel.</span></li><li><span class="fr">Micro-segmentation du réseau en 14 VLANs sous le pare-feu OPNsense, avec une politique « deny all ».</span><span class="en">Network micro-segmentation into 14 VLANs on the OPNsense firewall, with a “deny all” policy.</span></li><li><span class="fr">Contrôle d'accès par authentification multifacteur (MFA / TOTP) et par rôles (RBAC), avec politiques contextuelles et vérification de la posture des appareils.</span><span class="en">Access control with multi-factor authentication (MFA / TOTP) and roles (RBAC), with contextual policies and device posture checks.</span></li><li><span class="fr">Tableau de bord SOC : supervision et détection des attaques en temps réel, classées par type, avec un moteur de scoring de risque.</span><span class="en">SOC dashboard: real-time attack monitoring and detection, classified by type, with a risk scoring engine.</span></li><li><span class="fr">Réponse automatisée aux incidents : blocage automatique de toute source jugée critique via l'API d'OPNsense, avec alertes email.</span><span class="en">Automated incident response: automatic blocking of any source rated critical through the OPNsense API, with email alerts.</span></li><li><span class="fr">Protection anti-force brute, journal d'audit des accès et tests d'intrusion depuis Kali Linux (Nmap).</span><span class="en">Brute-force protection, access audit log and penetration tests from Kali Linux (Nmap).</span></li></ul></div>
+        <div><div class="kpis">
+          <div class="kpi"><b>14</b><span><span class="fr">VLANs segmentés sous OPNsense</span><span class="en">VLANs segmented on OPNsense</span></span></div>
+          <div class="kpi"><b>3</b><span><span class="fr">Rôles RBAC : Admin, Analyste SOC, Viewer</span><span class="en">RBAC roles: Admin, SOC Analyst, Viewer</span></span></div>
+          <div class="kpi"><b>997<span style="font-size:.9rem;color:var(--muted)"> / 1000</span></b><span><span class="fr">Ports filtrés au scan Nmap</span><span class="en">Ports filtered in the Nmap scan</span></span></div>
+          <div class="kpi"><b>3</b><span><span class="fr">Échecs de connexion avant verrouillage</span><span class="en">Failed logins before lockout</span></span></div>
+        </div><h4>Stack</h4><div class="chips"><span class="chip">OPNsense</span><span class="chip">WireGuard</span><span class="chip">VLAN 802.1Q</span><span class="chip">MFA / TOTP</span><span class="chip">RBAC</span><span class="chip">Laravel</span><span class="chip">MySQL</span><span class="chip">Docker Compose</span><span class="chip">VirtualBox</span><span class="chip">WSL2</span><span class="chip">Kali Linux</span><span class="chip">Nmap</span><span class="chip">NIST SP 800-207</span></div>
+        <div class="p-links"><a class="btn sm" href="https://github.com/ismailialaouiwiam" target="_blank" rel="noopener"><svg class="ic"><use href="#i-gh"/></svg>GitHub</a></div></div>
+      </div>
+      <div class="fr"><figure class="arch rv">
+<svg viewBox="0 0 900 340" role="img" aria-label="Schéma de l'architecture ZTNA">
+  <defs><marker id="ahf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
+  <marker id="ahfw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--warn)"/></marker></defs>
+  <rect class="zone" x="8" y="8" width="884" height="324" rx="14"/>
+  <text class="zt" x="24" y="30">ARCHITECTURE ZERO TRUST — NEVER TRUST, ALWAYS VERIFY</text>
+  <rect class="box" x="30" y="60" width="160" height="76" rx="10"/><text class="lab" x="110" y="92" text-anchor="middle">Poste distant</text><text class="sm" x="110" y="113" text-anchor="middle">client WireGuard</text>
+  <rect class="box hl" x="300" y="52" width="230" height="92" rx="10"/><text class="lab" x="415" y="82" text-anchor="middle">OPNsense</text><text class="sm" x="415" y="102" text-anchor="middle">pare-feu · « deny all »</text><text class="sm" x="415" y="120" text-anchor="middle">alias ZTNA_Blocked_Hosts</text>
+  <rect class="box" x="650" y="52" width="220" height="92" rx="10"/><text class="lab" x="760" y="82" text-anchor="middle">14 VLANs</text><text class="sm" x="760" y="102" text-anchor="middle">micro-segmentation</text><text class="sm" x="760" y="120" text-anchor="middle">quarantaine isolée</text>
+  <rect class="box hl" x="300" y="224" width="230" height="92" rx="10"/><text class="lab" x="415" y="254" text-anchor="middle">Portail ZTNA (Laravel)</text><text class="sm" x="415" y="274" text-anchor="middle">MFA · RBAC · contexte</text><text class="sm" x="415" y="292" text-anchor="middle">scoring de risque · audit</text>
+  <rect class="box" x="650" y="224" width="220" height="92" rx="10"/><text class="lab" x="760" y="254" text-anchor="middle">Équipe SOC</text><text class="sm" x="760" y="274" text-anchor="middle">tableau de bord temps réel</text><text class="sm" x="760" y="292" text-anchor="middle">alertes email</text>
+  <path class="ar" d="M190 98H300" marker-end="url(#ahf)"/><text class="sm" x="245" y="88" text-anchor="middle">tunnel chiffré</text>
+  <path class="ar" d="M530 98H650" marker-end="url(#ahf)"/><text class="sm" x="590" y="88" text-anchor="middle">flux autorisés</text>
+  <path class="ar" d="M370 144V224" marker-end="url(#ahf)"/><text class="sm" x="362" y="188" text-anchor="end">journal pare-feu</text>
+  <path d="M460 224V144" fill="none" stroke="var(--warn)" stroke-width="1.6" stroke-dasharray="6 5" marker-end="url(#ahfw)"/><text x="470" y="182" style="fill:var(--warn);font:500 11px var(--mono)">CRITICAL →</text><text x="470" y="197" style="fill:var(--warn);font:500 11px var(--mono)">blocage IP (API)</text>
+  <path class="ar" d="M530 270H650" marker-end="url(#ahf)"/><text class="sm" x="590" y="260" text-anchor="middle">alertes</text>
+</svg>
+<figcaption>OPNsense filtre et journalise ; le portail calcule un score par source et renvoie une décision de blocage au pare-feu.</figcaption>
+</figure></div><div class="en"><figure class="arch rv">
+<svg viewBox="0 0 900 340" role="img" aria-label="ZTNA architecture diagram">
+  <defs><marker id="ahe" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="ah"/></marker>
+  <marker id="ahew" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--warn)"/></marker></defs>
+  <rect class="zone" x="8" y="8" width="884" height="324" rx="14"/>
+  <text class="zt" x="24" y="30">ZERO TRUST ARCHITECTURE — NEVER TRUST, ALWAYS VERIFY</text>
+  <rect class="box" x="30" y="60" width="160" height="76" rx="10"/><text class="lab" x="110" y="92" text-anchor="middle">Remote user</text><text class="sm" x="110" y="113" text-anchor="middle">WireGuard client</text>
+  <rect class="box hl" x="300" y="52" width="230" height="92" rx="10"/><text class="lab" x="415" y="82" text-anchor="middle">OPNsense</text><text class="sm" x="415" y="102" text-anchor="middle">firewall · “deny all”</text><text class="sm" x="415" y="120" text-anchor="middle">alias ZTNA_Blocked_Hosts</text>
+  <rect class="box" x="650" y="52" width="220" height="92" rx="10"/><text class="lab" x="760" y="82" text-anchor="middle">14 VLANs</text><text class="sm" x="760" y="102" text-anchor="middle">micro-segmentation</text><text class="sm" x="760" y="120" text-anchor="middle">isolated quarantine</text>
+  <rect class="box hl" x="300" y="224" width="230" height="92" rx="10"/><text class="lab" x="415" y="254" text-anchor="middle">ZTNA portal (Laravel)</text><text class="sm" x="415" y="274" text-anchor="middle">MFA · RBAC · context</text><text class="sm" x="415" y="292" text-anchor="middle">risk scoring · audit</text>
+  <rect class="box" x="650" y="224" width="220" height="92" rx="10"/><text class="lab" x="760" y="254" text-anchor="middle">SOC team</text><text class="sm" x="760" y="274" text-anchor="middle">real-time dashboard</text><text class="sm" x="760" y="292" text-anchor="middle">email alerts</text>
+  <path class="ar" d="M190 98H300" marker-end="url(#ahe)"/><text class="sm" x="245" y="88" text-anchor="middle">encrypted tunnel</text>
+  <path class="ar" d="M530 98H650" marker-end="url(#ahe)"/><text class="sm" x="590" y="88" text-anchor="middle">allowed flows</text>
+  <path class="ar" d="M370 144V224" marker-end="url(#ahe)"/><text class="sm" x="362" y="188" text-anchor="end">firewall log</text>
+  <path d="M460 224V144" fill="none" stroke="var(--warn)" stroke-width="1.6" stroke-dasharray="6 5" marker-end="url(#ahew)"/><text x="470" y="182" style="fill:var(--warn);font:500 11px var(--mono)">CRITICAL →</text><text x="470" y="197" style="fill:var(--warn);font:500 11px var(--mono)">IP block (API)</text>
+  <path class="ar" d="M530 270H650" marker-end="url(#ahe)"/><text class="sm" x="590" y="260" text-anchor="middle">alerts</text>
+</svg>
+<figcaption>OPNsense filters and logs; the portal scores each source and sends a blocking decision back to the firewall.</figcaption>
+</figure></div>
+      <div class="gallery-wrap"><div class="sub-h"><span class="fr">Captures réelles de la plateforme</span><span class="en">Real screenshots of the platform</span></div><div class="gallery">
+<figure class="shot"><div class="shot-frame"><img src="assets/screenshots/ztna-01-supervision.jpg" alt="Supervision temps réel" data-l="alt" data-fr="Supervision temps réel" data-en="Real-time monitoring" loading="lazy"></div><figcaption><b><span class="fr">Supervision temps réel</span><span class="en">Real-time monitoring</span></b></figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="assets/screenshots/ztna-02-blocage.jpg" alt="Blocage automatique" data-l="alt" data-fr="Blocage automatique" data-en="Automatic blocking" loading="lazy"></div><figcaption><b><span class="fr">Blocage automatique</span><span class="en">Automatic blocking</span></b></figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="assets/screenshots/ztna-03-opnsense-log.jpg" alt="Journal du pare-feu OPNsense" data-l="alt" data-fr="Journal du pare-feu OPNsense" data-en="OPNsense firewall log" loading="lazy"></div><figcaption><b><span class="fr">Journal du pare-feu OPNsense</span><span class="en">OPNsense firewall log</span></b></figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="assets/screenshots/ztna-04-score-risque.jpg" alt="Moteur de score de risque" data-l="alt" data-fr="Moteur de score de risque" data-en="Risk scoring engine" loading="lazy"></div><figcaption><b><span class="fr">Moteur de score de risque</span><span class="en">Risk scoring engine</span></b></figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="assets/screenshots/ztna-05-anti-force-brute.jpg" alt="Protection anti-force brute" data-l="alt" data-fr="Protection anti-force brute" data-en="Brute-force protection" loading="lazy"></div><figcaption><b><span class="fr">Protection anti-force brute</span><span class="en">Brute-force protection</span></b></figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="assets/screenshots/ztna-06-alertes-email.jpg" alt="Alertes email du SOC" data-l="alt" data-fr="Alertes email du SOC" data-en="SOC email alerts" loading="lazy"></div><figcaption><b><span class="fr">Alertes email du SOC</span><span class="en">SOC email alerts</span></b></figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="assets/screenshots/ztna-07-politique-contextuelle.jpg" alt="Politique d'accès contextuelle" data-l="alt" data-fr="Politique d'accès contextuelle" data-en="Contextual access policy" loading="lazy"></div><figcaption><b><span class="fr">Politique d'accès contextuelle</span><span class="en">Contextual access policy</span></b></figcaption></figure>
+      </div></div>
+    </article>
+<article class="project rv" id="p-mpls" data-cat="reseau secu">
+      <div class="p-top"><span class="badge"><span class="fr">Réseaux opérateur</span><span class="en">Carrier networking</span></span><span class="p-meta"><span class="fr">ISGA Rabat · 2025 · 2 mois</span><span class="en">ISGA Rabat · 2025 · 2 months</span></span></div>
+      <h3><span class="fr">Réseau opérateur MPLS L3VPN</span><span class="en">MPLS L3VPN carrier network</span></h3>
+      <p class="p-desc"><span class="fr">Conception et mise en œuvre, sous GNS3, d'un réseau opérateur MPLS L3VPN reliant trois clients isolés, avec un extranet contrôlé entre deux sites.</span><span class="en">Design and implementation, in GNS3, of an MPLS L3VPN carrier network connecting three isolated customers, with a controlled extranet between two sites.</span></p>
+      <div class="sub-h"><span class="fr">Démo</span><span class="en">Demo</span></div><div class="demo small" data-demo="mpls"><div class="laptop"><div class="lid"><div class="cam"></div><div class="screen"><div class="dk"><div class="topo mp" style="flex:1.7">
+<svg viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="27" y1="56" x2="42" y2="56" class="" data-l2="R1R4" vector-effect="non-scaling-stroke" style="stroke-width:1.5px"/><line x1="50" y1="30" x2="42" y2="56" class="" data-l2="R2R4" vector-effect="non-scaling-stroke" style="stroke-width:1.5px"/><line x1="42" y1="56" x2="58" y2="56" class="" data-l2="R4R5" vector-effect="non-scaling-stroke" style="stroke-width:1.5px"/><line x1="50" y1="30" x2="58" y2="56" class="" data-l2="R2R5" vector-effect="non-scaling-stroke" style="stroke-width:1.5px"/><line x1="73" y1="56" x2="58" y2="56" class="" data-l2="R3R5" vector-effect="non-scaling-stroke" style="stroke-width:1.5px"/><line x1="8" y1="34" x2="27" y2="56" class="" data-l2="A1R1" vector-effect="non-scaling-stroke" style="stroke-width:1.5px"/><line x1="8" y1="56" x2="27" y2="56" class="" data-l2="B1R1" vector-effect="non-scaling-stroke" style="stroke-width:1.5px"/><line x1="8" y1="78" x2="27" y2="56" class="" data-l2="C1R1" vector-effect="non-scaling-stroke" style="stroke-width:1.5px"/><line x1="34" y1="9" x2="50" y2="30" class="" data-l2="A2R2" vector-effect="non-scaling-stroke" style="stroke-width:1.5px"/><line x1="50" y1="9" x2="50" y2="30" class="" data-l2="B2R2" vector-effect="non-scaling-stroke" style="stroke-width:1.5px"/><line x1="66" y1="9" x2="50" y2="30" class="" data-l2="C2R2" vector-effect="non-scaling-stroke" style="stroke-width:1.5px"/><line x1="92" y1="34" x2="73" y2="56" class="" data-l2="A3R3" vector-effect="non-scaling-stroke" style="stroke-width:1.5px"/><line x1="92" y1="56" x2="73" y2="56" class="" data-l2="B3R3" vector-effect="non-scaling-stroke" style="stroke-width:1.5px"/><line x1="92" y1="78" x2="73" y2="56" class="" data-l2="C3R3" vector-effect="non-scaling-stroke" style="stroke-width:1.5px"/></svg>
+<div class="nd pe" data-n="R1" style="left:27%;top:56%">R1<small>PE</small></div><div class="nd pe" data-n="R2" style="left:50%;top:30%">R2<small>PE</small></div><div class="nd pe" data-n="R3" style="left:73%;top:56%">R3<small>PE</small></div><div class="nd " data-n="R4" style="left:42%;top:56%">R4<small>P</small></div><div class="nd " data-n="R5" style="left:58%;top:56%">R5<small>P</small></div><div class="nd ca" data-n="A1" style="left:8%;top:34%">A1</div><div class="nd cb" data-n="B1" style="left:8%;top:56%">B1</div><div class="nd cc" data-n="C1" style="left:8%;top:78%">C1</div><div class="nd ca" data-n="A2" style="left:34%;top:9%">A2</div><div class="nd cb" data-n="B2" style="left:50%;top:9%">B2</div><div class="nd cc" data-n="C2" style="left:66%;top:9%">C2</div><div class="nd ca" data-n="A3" style="left:92%;top:34%">A3</div><div class="nd cb" data-n="B3" style="left:92%;top:56%">B3</div><div class="nd cc" data-n="C3" style="left:92%;top:78%">C3</div>
+<div class="pkt"></div><div class="st">MPLS L3VPN · 3 PE · 2 P · 9 CE</div></div>
+<div class="tm" style="flex:1.05;font-size:.8em"><div class="tm-h">Console</div><div data-out></div></div></div><div class="cursor"><svg viewBox="0 0 24 24"><path d="M4 2l15 9-7 1.6L9 20z" fill="#111827" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg></div></div></div><div class="base"></div></div><div class="steps" role="group"><button type="button" data-step="0" aria-pressed="true"><span class="fr">1 · A1 → client A</span><span class="en">1 · A1 → customer A</span></button><button type="button" data-step="1" aria-pressed="false"><span class="fr">2 · A1 → C3</span><span class="en">2 · A1 → C3</span></button><button type="button" data-step="2" aria-pressed="false"><span class="fr">3 · A1 → client B</span><span class="en">3 · A1 → customer B</span></button><button type="button" data-step="3" aria-pressed="false"><span class="fr">4 · A1 → C1, C2</span><span class="en">4 · A1 → C1, C2</span></button><button type="button" data-replay aria-pressed="false"><span class="fr">↻ Rejouer</span><span class="en">↻ Replay</span></button></div><p class="demo-cap"><span class="fr">Démo animée, d'après les tests réels du projet.</span><span class="en">Animated demo, based on the project's real tests.</span></p></div>
+      <div class="p-cols">
+        <div><h4><span class="fr">Réalisations</span><span class="en">Highlights</span></h4><ul class="ticks"><li><span class="fr">Réseau MPLS L3VPN de 14 routeurs Cisco (3 PE, 2 P, 9 CE) pour trois clients répartis sur neuf sites.</span><span class="en">MPLS L3VPN network of 14 Cisco routers (3 PE, 2 P, 9 CE) for three customers across nine sites.</span></li><li><span class="fr">Isolation des clients par VRF et MP-BGP (VPNv4), avec OSPF et LDP dans la dorsale.</span><span class="en">Customer isolation with VRFs and MP-BGP (VPNv4), with OSPF and LDP in the backbone.</span></li><li><span class="fr">Extranet contrôlé entre deux sites (A1 ↔ C3), tout en garantissant l'isolation des autres réseaux.</span><span class="en">Controlled extranet between two sites (A1 ↔ C3), while keeping the other networks isolated.</span></li><li><span class="fr">Sécurisation : authentification MD5 des sessions OSPF, LDP et BGP, limitation des routes par VRF et chiffrement IPsec entre deux sites.</span><span class="en">Hardening: MD5 authentication of OSPF, LDP and BGP sessions, per-VRF route limits and IPsec encryption between two sites.</span></li></ul></div>
+        <div><h4>Stack</h4><div class="chips"><span class="chip">MPLS L3VPN</span><span class="chip">VRF</span><span class="chip">MP-BGP VPNv4</span><span class="chip">LDP</span><span class="chip">OSPF</span><span class="chip">RIPv2</span><span class="chip">EIGRP</span><span class="chip">MD5</span><span class="chip">IPsec</span><span class="chip">GNS3</span><span class="chip">Cisco 7200</span></div></div>
+      </div>
+      <div class="gallery-wrap" style="margin-bottom:28px"><div class="sub-h"><span class="fr">Qui joint qui : résultats des tests</span><span class="en">Who reaches whom: test results</span></div>
+<div class="mx-wrap"><table class="mx"><thead><tr><th></th><th>A1</th><th>A2</th><th>A3</th><th>B1</th><th>B2</th><th>B3</th><th>C1</th><th>C2</th><th>C3</th></tr></thead><tbody><tr><th>A1</th><td class="self">·</td><td class="y">✓</td><td class="y">✓</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="y">✓</td></tr><tr><th>A2</th><td class="y">✓</td><td class="self">·</td><td class="y">✓</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td></tr><tr><th>A3</th><td class="y">✓</td><td class="y">✓</td><td class="self">·</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td></tr><tr><th>B1</th><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="self">·</td><td class="y">✓</td><td class="y">✓</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td></tr><tr><th>B2</th><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="y">✓</td><td class="self">·</td><td class="y">✓</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td></tr><tr><th>B3</th><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="y">✓</td><td class="y">✓</td><td class="self">·</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td></tr><tr><th>C1</th><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="self">·</td><td class="y">✓</td><td class="y">✓</td></tr><tr><th>C2</th><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="y">✓</td><td class="self">·</td><td class="y">✓</td></tr><tr><th>C3</th><td class="y">✓</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="n">✕</td><td class="y">✓</td><td class="y">✓</td><td class="self">·</td></tr></tbody></table></div>
+<p class="mx-note"><span class="fr">Chaque site ne joint que les sites de son propre client. Seule exception : l'extranet entre A1 et C3.</span><span class="en">Each site only reaches the sites of its own customer. The only exception is the extranet between A1 and C3.</span></p></div><div class="gallery-wrap"><div class="sub-h"><span class="fr">Captures du projet</span><span class="en">Project screenshots</span></div><div class="gallery">
+<figure class="shot"><div class="shot-frame"><img src="assets/screenshots/mpls-01-topologie-gns3.jpg" alt="Topologie complète sous GNS3" data-l="alt" data-fr="Topologie complète sous GNS3" data-en="Full topology in GNS3" loading="lazy"></div><figcaption><b><span class="fr">Topologie complète sous GNS3</span><span class="en">Full topology in GNS3</span></b></figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="assets/screenshots/mpls-02-vrf.jpg" alt="VRF des trois clients sur le PE R1" data-l="alt" data-fr="VRF des trois clients sur le PE R1" data-en="VRFs of the three customers on PE R1" loading="lazy"></div><figcaption><b><span class="fr">VRF des trois clients sur le PE R1</span><span class="en">VRFs of the three customers on PE R1</span></b></figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="assets/screenshots/mpls-03-mp-bgp.jpg" alt="Sessions MP-BGP VPNv4 entre PE" data-l="alt" data-fr="Sessions MP-BGP VPNv4 entre PE" data-en="MP-BGP VPNv4 sessions between PEs" loading="lazy"></div><figcaption><b><span class="fr">Sessions MP-BGP VPNv4 entre PE</span><span class="en">MP-BGP VPNv4 sessions between PEs</span></b></figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="assets/screenshots/mpls-04-extranet.jpg" alt="Extranet : A1 joint C3" data-l="alt" data-fr="Extranet : A1 joint C3" data-en="Extranet: A1 reaches C3" loading="lazy"></div><figcaption><b><span class="fr">Extranet : A1 joint C3</span><span class="en">Extranet: A1 reaches C3</span></b></figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="assets/screenshots/mpls-05-isolation.jpg" alt="Isolation : A1 ne joint pas C1" data-l="alt" data-fr="Isolation : A1 ne joint pas C1" data-en="Isolation: A1 cannot reach C1" loading="lazy"></div><figcaption><b><span class="fr">Isolation : A1 ne joint pas C1</span><span class="en">Isolation: A1 cannot reach C1</span></b></figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="assets/screenshots/mpls-06-traceroute-labels.jpg" alt="Traceroute : labels MPLS dans le cœur" data-l="alt" data-fr="Traceroute : labels MPLS dans le cœur" data-en="Traceroute: MPLS labels in the core" loading="lazy"></div><figcaption><b><span class="fr">Traceroute : labels MPLS dans le cœur</span><span class="en">Traceroute: MPLS labels in the core</span></b></figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="assets/screenshots/mpls-07-ipsec-esp.jpg" alt="Trafic du client B chiffré par IPsec (ESP)" data-l="alt" data-fr="Trafic du client B chiffré par IPsec (ESP)" data-en="Customer B traffic encrypted with IPsec (ESP)" loading="lazy"></div><figcaption><b><span class="fr">Trafic du client B chiffré par IPsec (ESP)</span><span class="en">Customer B traffic encrypted with IPsec (ESP)</span></b></figcaption></figure>
+</div></div>
+    </article>
+<article class="project rv" id="p-cite" data-cat="dev">
+      <div class="p-top"><span class="badge"><span class="fr">Développement web</span><span class="en">Web development</span></span><span class="p-meta"><span class="fr">Groupe OCP, Khouribga · 2024 · 1 mois</span><span class="en">OCP Group, Khouribga · 2024 · 1 month</span></span></div>
+      <h3><span class="fr">« Cité Verte » : gestion des lots employés</span><span class="en">“Cité Verte”: employee plot management</span></h3>
+      <p class="p-desc"><span class="fr">Application web pour le Département Social, dédiée à la gestion des lots attribués aux employés.</span><span class="en">Web application for the Social Department, to manage the plots allocated to employees.</span></p>
+      
+      <div class="p-cols">
+        <div><h4><span class="fr">Réalisations</span><span class="en">Highlights</span></h4><ul class="ticks"><li><span class="fr">Application web « Cité Verte » développée avec Laravel et MySQL.</span><span class="en">“Cité Verte” web application built with Laravel and MySQL.</span></li><li><span class="fr">Modules de suivi des paiements, des avances et de l'état des lots.</span><span class="en">Modules that track payments, advances and plot status.</span></li></ul></div>
+        <div><h4>Stack</h4><div class="chips"><span class="chip">Laravel</span><span class="chip">PHP</span><span class="chip">MySQL</span></div></div>
+      </div>
+      
+    </article>
+<article class="project rv" id="p-fekra" data-cat="reseau">
+      <div class="p-top"><span class="badge"><span class="fr">Réseaux</span><span class="en">Networking</span></span><span class="p-meta"><span class="fr">Fekra Systems, Rabat · 2022 · 1 mois</span><span class="en">Fekra Systems, Rabat · 2022 · 1 month</span></span></div>
+      <h3><span class="fr">Dimensionnement d'un réseau pour une moyenne entreprise</span><span class="en">Network sizing for a medium-sized company</span></h3>
+      <p class="p-desc"><span class="fr">Étude et dimensionnement du réseau d'une entreprise sur deux étages, avec configuration et sécurisation des switchs.</span><span class="en">Study and sizing of a company network over two floors, with switch configuration and hardening.</span></p>
+      
+      <div class="p-cols">
+        <div><h4><span class="fr">Réalisations</span><span class="en">Highlights</span></h4><ul class="ticks"><li><span class="fr">Réseau sur deux étages : 6 switchs Cisco Catalyst 2960 et 3 routeurs Cisco 2811.</span><span class="en">Two-floor network: 6 Cisco Catalyst 2960 switches and 3 Cisco 2811 routers.</span></li><li><span class="fr">Configuration des switchs : VLANs statiques et adresse de gestion.</span><span class="en">Switch configuration: static VLANs and management address.</span></li><li><span class="fr">Sécurisation de l'accès aux équipements par mot de passe.</span><span class="en">Password-protected access to the devices.</span></li></ul></div>
+        <div><h4>Stack</h4><div class="chips"><span class="chip">Cisco Catalyst 2960</span><span class="chip">Cisco 2811</span><span class="chip">VLAN</span></div></div>
+      </div>
+      <div class="gallery-wrap"><div class="sub-h"><span class="fr">Architecture</span><span class="en">Architecture</span></div><div class="gallery">
+<figure class="shot"><div class="shot-frame"><img src="assets/screenshots/fekra-01-architecture.jpg" alt="Architecture du réseau sur deux étages" data-l="alt" data-fr="Architecture du réseau sur deux étages" data-en="Network architecture over two floors" loading="lazy"></div><figcaption><b><span class="fr">Architecture du réseau sur deux étages</span><span class="en">Network architecture over two floors</span></b></figcaption></figure>
+</div></div>
+    </article>
+    <div class="sec-head rv" style="margin:56px 0 28px"><div class="eyebrow"><span class="fr">Autres projets</span><span class="en">Other projects</span></div><h2 style="font-size:clamp(1.4rem,2.6vw,1.9rem)"><span class="fr">Projets techniques.</span><span class="en">Technical projects.</span></h2></div>
+<article class="project rv" id="p-ha" data-cat="reseau secu">
+      <div class="p-top"><span class="badge"><span class="fr">Haute disponibilité</span><span class="en">High availability</span></span><span class="p-meta"><span class="fr">Projet technique</span><span class="en">Technical project</span></span></div>
+      <h3><span class="fr">Haute disponibilité &amp; VPN sécurisé</span><span class="en">High availability &amp; secure VPN</span></h3>
+      <p class="p-desc"><span class="fr">Conçu une architecture réseau multi-sites à haute disponibilité (VRRP), avec surveillance des liaisons par IP SLA et basculement automatique vers un tunnel VPN IPsec.</span><span class="en">Designed a highly available multi-site network architecture (VRRP), with link monitoring through IP SLA and automatic failover to an IPsec VPN tunnel.</span></p>
+      
+      <div class="p-cols">
+        <div><h4><span class="fr">Réalisations</span><span class="en">Highlights</span></h4><ul class="ticks"><li><span class="fr">Haute disponibilité des passerelles avec VRRP.</span><span class="en">Gateway high availability with VRRP.</span></li><li><span class="fr">Surveillance des liaisons par IP SLA.</span><span class="en">Link monitoring through IP SLA.</span></li><li><span class="fr">Basculement automatique vers un tunnel VPN IPsec.</span><span class="en">Automatic failover to an IPsec VPN tunnel.</span></li></ul></div>
+        <div><h4>Stack</h4><div class="chips"><span class="chip">VRRP</span><span class="chip">IP SLA</span><span class="chip">VPN IPsec</span></div></div>
+      </div>
+      
+    </article>
+<article class="project rv" id="p-vpn" data-cat="secu dev">
+      <div class="p-top"><span class="badge"><span class="fr">Mobile &amp; VPN</span><span class="en">Mobile &amp; VPN</span></span><span class="p-meta"><span class="fr">Projet technique</span><span class="en">Technical project</span></span></div>
+      <h3><span class="fr">Application mobile VPN</span><span class="en">Mobile VPN app</span></h3>
+      <p class="p-desc"><span class="fr">Développé une application multiplateforme intégrant OpenVPN, avec génération automatique des fichiers de configuration pour connecter les utilisateurs à des serveurs sécurisés.</span><span class="en">Developed a cross-platform app integrating OpenVPN, with automatic generation of configuration files to connect users to secure servers.</span></p>
+      
+      <div class="p-cols">
+        <div><h4><span class="fr">Réalisations</span><span class="en">Highlights</span></h4><ul class="ticks"><li><span class="fr">Application multiplateforme développée avec Flutter.</span><span class="en">Cross-platform app built with Flutter.</span></li><li><span class="fr">Intégration du protocole OpenVPN.</span><span class="en">Integration of the OpenVPN protocol.</span></li><li><span class="fr">Génération automatique des fichiers de configuration.</span><span class="en">Automatic generation of configuration files.</span></li></ul></div>
+        <div><h4>Stack</h4><div class="chips"><span class="chip">Flutter</span><span class="chip">OpenVPN</span></div></div>
+      </div>
+      
+    </article>
+<article class="project rv" id="p-shop" data-cat="dev">
+      <div class="p-top"><span class="badge"><span class="fr">Développement web</span><span class="en">Web development</span></span><span class="p-meta"><span class="fr">Projet technique</span><span class="en">Technical project</span></span></div>
+      <h3><span class="fr">Site e-commerce intelligent</span><span class="en">Smart e-commerce site</span></h3>
+      <p class="p-desc"><span class="fr">Développé une boutique en ligne Laravel avec moteur de recherche en langage naturel basé sur un modèle LLM.</span><span class="en">Developed a Laravel online store with a natural-language search engine based on an LLM.</span></p>
+      
+      <div class="p-cols">
+        <div><h4><span class="fr">Réalisations</span><span class="en">Highlights</span></h4><ul class="ticks"><li><span class="fr">Boutique en ligne développée avec Laravel.</span><span class="en">Online store built with Laravel.</span></li><li><span class="fr">Moteur de recherche en langage naturel basé sur un modèle LLM.</span><span class="en">Natural-language search engine based on an LLM.</span></li></ul></div>
+        <div><h4>Stack</h4><div class="chips"><span class="chip">Laravel</span><span class="chip">LLM</span></div></div>
+      </div>
+      
+    </article>
+<article class="project rv" id="p-free" data-cat="dev">
+      <div class="p-top"><span class="badge"><span class="fr">Développement web</span><span class="en">Web development</span></span><span class="p-meta"><span class="fr">Projet technique</span><span class="en">Technical project</span></span></div>
+      <h3><span class="fr">Plateforme freelance</span><span class="en">Freelance platform</span></h3>
+      <p class="p-desc"><span class="fr">Développé une plateforme web permettant aux freelances de publier des services et aux clients de poster des projets, avec gestion des utilisateurs et des annonces.</span><span class="en">Developed a web platform where freelancers publish services and clients post projects, with user and listing management.</span></p>
+      
+      <div class="p-cols">
+        <div><h4><span class="fr">Réalisations</span><span class="en">Highlights</span></h4><ul class="ticks"><li><span class="fr">Publication de services par les freelances et de projets par les clients.</span><span class="en">Freelancers publish services and clients post projects.</span></li><li><span class="fr">Gestion des utilisateurs et des annonces.</span><span class="en">User and listing management.</span></li></ul></div>
+        <div><h4>Stack</h4><div class="chips"><span class="chip">Laravel</span><span class="chip">MySQL</span></div></div>
+      </div>
+      
+    </article>
+  </div>
+</section>
+
+<section id="parcours">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow"><span class="fr">Expérience</span><span class="en">Experience</span></div><h2><span class="fr">Parcours professionnel.</span><span class="en">Professional experience.</span></h2></div>
+    <div class="tl">
+<div class="tl-item rv"><div class="tl-top"><div><h3><span class="fr">Ingénieure Réseaux &amp; Cybersécurité — Stage PFE</span><span class="en">Network &amp; Cybersecurity Engineer — Final-year internship</span></h3><div class="org"><span class="fr">Ministère de l'Agriculture (DIAEA), Rabat</span><span class="en">Ministry of Agriculture (DIAEA), Rabat</span></div></div><span class="when"><span class="fr">2026 · 4 mois</span><span class="en">2026 · 4 months</span></span></div><p style="color:var(--muted);font-size:.93rem;margin-top:6px"><em><span class="fr">Conception et mise en œuvre d&#x27;une architecture Zero Trust Network Access (ZTNA)</span><span class="en">Design and implementation of a Zero Trust Network Access (ZTNA) architecture</span></em></p><ul class="ticks"><li><span class="fr">Conçu et déployé une architecture ZTNA avec accès distant chiffré via WireGuard.</span><span class="en">Designed and deployed a ZTNA architecture with encrypted remote access through WireGuard.</span></li><li><span class="fr">Segmenté le réseau en 14 VLANs sous le pare-feu OPNsense (micro-segmentation).</span><span class="en">Segmented the network into 14 VLANs on the OPNsense firewall (micro-segmentation).</span></li><li><span class="fr">Mis en place le contrôle d'accès par authentification multifacteur (MFA) et par rôles (RBAC).</span><span class="en">Set up access control with multi-factor authentication (MFA) and roles (RBAC).</span></li><li><span class="fr">Développé un tableau de bord SOC pour la supervision et la détection des attaques en temps réel.</span><span class="en">Built a SOC dashboard for real-time attack monitoring and detection.</span></li><li><span class="fr">Automatisé la réponse aux incidents : blocage automatique de toute source jugée critique.</span><span class="en">Automated incident response: automatic blocking of any source rated critical.</span></li></ul></div>
+<div class="tl-item rv"><div class="tl-top"><div><h3><span class="fr">Stage Réseaux — MPLS L3VPN</span><span class="en">Networking Internship — MPLS L3VPN</span></h3><div class="org">ISGA Rabat</div></div><span class="when"><span class="fr">2025 · 2 mois</span><span class="en">2025 · 2 months</span></span></div><ul class="ticks"><li><span class="fr">Conçu et mis en œuvre sous GNS3 un réseau opérateur MPLS L3VPN multi-VRF (14 routeurs Cisco), avec routage intranet et extranet sécurisé.</span><span class="en">Designed and implemented in GNS3 a multi-VRF MPLS L3VPN carrier network (14 Cisco routers), with secure intranet and extranet routing.</span></li><li><span class="fr">Établi une communication sélective entre deux sites (A1 ↔ C3) tout en garantissant l'isolation des autres réseaux.</span><span class="en">Established selective communication between two sites (A1 ↔ C3) while keeping the other networks isolated.</span></li><li><span class="fr">Sécurisé l'architecture : authentification MD5 des sessions OSPF, LDP et BGP, limitation des routes par VRF et chiffrement IPsec entre deux sites.</span><span class="en">Hardened the architecture: MD5 authentication of OSPF, LDP and BGP sessions, per-VRF route limits and IPsec encryption between two sites.</span></li></ul></div>
+<div class="tl-item rv"><div class="tl-top"><div><h3><span class="fr">Stage Développement Web</span><span class="en">Web Development Internship</span></h3><div class="org"><span class="fr">Groupe OCP, Khouribga</span><span class="en">OCP Group, Khouribga</span></div></div><span class="when"><span class="fr">2024 · 1 mois</span><span class="en">2024 · 1 month</span></span></div><ul class="ticks"><li><span class="fr">Développé l'application web « Cité Verte » (Laravel / MySQL) pour le Département Social, dédiée à la gestion des lots attribués aux employés.</span><span class="en">Developed the “Cité Verte” web application (Laravel / MySQL) for the Social Department, to manage the plots allocated to employees.</span></li><li><span class="fr">Implémenté les modules de suivi des paiements, des avances et de l'état des lots.</span><span class="en">Implemented the modules that track payments, advances and plot status.</span></li></ul></div>
+<div class="tl-item rv"><div class="tl-top"><div><h3><span class="fr">Stage Réseaux</span><span class="en">Networking Internship</span></h3><div class="org">Fekra Systems, Rabat</div></div><span class="when"><span class="fr">2022 · 1 mois</span><span class="en">2022 · 1 month</span></span></div><ul class="ticks"><li><span class="fr">Configuré des switchs et routeurs : VLANs statiques, routage inter-VLAN et DHCP.</span><span class="en">Configured switches and routers: static VLANs, inter-VLAN routing and DHCP.</span></li><li><span class="fr">Sécurisé l'accès aux équipements par mot de passe et segmenté le réseau par VLANs.</span><span class="en">Secured device access with passwords and segmented the network with VLANs.</span></li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="formation" style="background:var(--bg2);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow"><span class="fr">Formation</span><span class="en">Education</span></div><h2><span class="fr">Parcours académique &amp; langues.</span><span class="en">Education &amp; languages.</span></h2></div>
+    <div class="two">
+      <div class="rv">
+        <div class="card"><span class="when">2023 – 2026</span><h3><span class="fr">Diplôme d'Ingénieur d'État — Réseaux, Systèmes &amp; Sécurité</span><span class="en">State Engineering Degree — Networks, Systems &amp; Security</span></h3><p>ISGA — Institut Supérieur d'Ingénierie et des Affaires, Rabat</p></div>
+        <div class="card"><span class="when">2020 – 2022</span><h3><span class="fr">Diplôme de Technicien Spécialisé — Réseaux Informatiques</span><span class="en">Specialized Technician Diploma — Computer Networks</span></h3><p>Institut Spécialisé de Technologie Appliquée NTIC, Hay Riad, Rabat</p></div>
+        <div class="card"><span class="when">2020</span><h3><span class="fr">Baccalauréat Sciences Physiques</span><span class="en">Baccalaureate in Physical Sciences</span></h3><p>Rabat</p></div>
+      </div>
+      <div class="rv">
+        <div class="sub-h"><span class="fr">Langues</span><span class="en">Languages</span></div>
+        <div class="langs">
+          <div class="lang"><span class="fr">Arabe</span><span class="en">Arabic</span></div>
+          <div class="lang"><span class="fr">Français</span><span class="en">French</span></div>
+          <div class="lang"><span class="fr">Anglais</span><span class="en">English</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow">Certifications</div><h2><span class="fr">Formations certifiantes.</span><span class="en">Certifications and training.</span></h2></div>
+    <div class="certs rv">
+<div class="cert"><span class="ico"><svg class="ic"><use href="#i-award"/></svg></span><h3>Cisco CCNA</h3><p>Introduction to Networks · Switching, Routing and Wireless Essentials. Cisco Networking Academy.</p><span class="state"><span class="fr">Obtenue</span><span class="en">Obtained</span></span></div>
+<div class="cert"><span class="ico"><svg class="ic"><use href="#i-award"/></svg></span><h3>Cisco Networking Academy</h3><p>IT Essentials · Networking Basics · Networking Devices and Initial Configuration.</p><span class="state"><span class="fr">Obtenue</span><span class="en">Obtained</span></span></div>
+<div class="cert"><span class="ico"><svg class="ic"><use href="#i-award"/></svg></span><h3><span class="fr">Cisco — Cybersécurité</span><span class="en">Cisco — Cybersecurity</span></h3><p>Introduction to Cybersecurity · Endpoint Security · Network Defense · Cyber Threat Management.</p><span class="state"><span class="fr">Obtenue</span><span class="en">Obtained</span></span></div>
+<div class="cert"><span class="ico"><svg class="ic"><use href="#i-award"/></svg></span><h3>CompTIA Security+</h3><p><span class="fr">Certification en cours de préparation.</span><span class="en">Certification in preparation.</span></p><span class="state wip"><span class="fr">En préparation</span><span class="en">In preparation</span></span></div>
+<div class="cert"><span class="ico"><svg class="ic"><use href="#i-award"/></svg></span><h3>CEH (Certified Ethical Hacker)</h3><p><span class="fr">Certification en cours de préparation.</span><span class="en">Certification in preparation.</span></p><span class="state wip"><span class="fr">En préparation</span><span class="en">In preparation</span></span></div>
+<div class="cert"><span class="ico"><svg class="ic"><use href="#i-award"/></svg></span><h3>ISO/IEC 27001:2022 Information Security Associate</h3><p>SkillFront.</p><span class="state wip"><span class="fr">En préparation</span><span class="en">In preparation</span></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box rv">
+      <div style="position:relative">
+        <div class="eyebrow">Contact</div>
+        <h2><span class="fr">Discutons de votre prochain projet.</span><span class="en">Let’s talk about your next project.</span></h2>
+        <p class="lead" style="margin-bottom:26px"><span class="fr">Ouverte aux opportunités en réseaux, cybersécurité et SOC.</span><span class="en">Open to opportunities in networking, cybersecurity and SOC.</span></p>
+        <div class="cta" style="margin-bottom:0">
+          <a class="btn primary" href="mailto:ismailialaouiwiam@gmail.com?subject=Opportunit%C3%A9%20%E2%80%94%20Portfolio"><svg class="ic"><use href="#i-mail"/></svg><span class="fr">Envoyer un e-mail</span><span class="en">Send an email</span></a>
+          <a class="btn" href="assets/CV_Wiaam_Ismaili_Alaoui_ATS.pdf" download><svg class="ic"><use href="#i-dl"/></svg><span class="fr">Télécharger le CV</span><span class="en">Download CV</span></a>
+        </div>
+      </div>
+      <div class="c-list">
+        <a class="c-item" href="mailto:ismailialaouiwiam@gmail.com"><span class="ico"><svg class="ic"><use href="#i-mail"/></svg></span><div><small>E-mail</small><span>ismailialaouiwiam@gmail.com</span></div></a>
+        <div class="c-item" style="opacity:.6"><span class="ico"><svg class="ic"><use href="#i-in"/></svg></span><div><small>LinkedIn</small><span><span class="fr">Lien à venir</span><span class="en">Link coming soon</span></span></div></div>
+        <a class="c-item" href="https://github.com/ismailialaouiwiam" target="_blank" rel="noopener"><span class="ico"><svg class="ic"><use href="#i-gh"/></svg></span><div><small>GitHub</small><span>github.com/ismailialaouiwiam</span></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="yr">2026</span> Wiam Ismaili Alaoui — <span class="fr">Salé, Maroc</span><span class="en">Salé, Morocco</span></span>
+    <a class="to-top" href="#accueil"><span class="fr">Haut de page ↑</span><span class="en">Back to top ↑</span></a>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Aperçu de la capture" data-l="aria-label" data-fr="Aperçu de la capture" data-en="Screenshot preview">
+  <button id="lb-x" aria-label="Fermer" data-l="aria-label" data-fr="Fermer" data-en="Close">×</button>
+  <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+</div>
+<script>
+/* ============================================================
+   RÉGLAGE : mettre à true quand tu as fini d'ajouter tes captures.
+   Les emplacements encore vides seront alors masqués automatiquement.
+   ============================================================ */
+const HIDE_EMPTY_SHOTS = true;
+
+(function(){
+  const root = document.documentElement;
+  const safe = (fn)=>{try{return fn()}catch(e){return null}};
+
+  // Langue
+  const META={
+    fr:{t:"Wiam Ismaili Alaoui — Ingénieure Réseaux, Systèmes & Sécurité",d:"Portfolio de Wiam Ismaili Alaoui, ingénieure d'État Réseaux, Systèmes & Sécurité (ISGA Rabat). Architecture Zero Trust (ZTNA), OPNsense, WireGuard, MPLS L3VPN, haute disponibilité."},
+    en:{t:"Wiam Ismaili Alaoui — Network, Systems & Security Engineer",d:"Portfolio of Wiam Ismaili Alaoui, Network, Systems & Security engineer (ISGA Rabat). Zero Trust architecture (ZTNA), OPNsense, WireGuard, MPLS L3VPN, high availability."}
+  };
+  function setLang(l){
+    l = l==='en' ? 'en' : 'fr';
+    root.setAttribute('lang', l);
+    document.title = META[l].t;
+    const md=document.querySelector('meta[name="description"]'); if(md) md.setAttribute('content', META[l].d);
+    document.querySelectorAll('[data-l]').forEach(el=>el.setAttribute(el.dataset.l, el.dataset[l]));
+    document.querySelectorAll('.lang-sw button').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.lang===l)));
+  }
+  document.querySelectorAll('.lang-sw button').forEach(b=>b.addEventListener('click',()=>{setLang(b.dataset.lang);safe(()=>localStorage.setItem('lang',b.dataset.lang))}));
+  setLang(root.getAttribute('lang'));
+
+  // Thème
+  const saved = safe(()=>localStorage.getItem('theme'));
+  if(saved) root.setAttribute('data-theme', saved);
+  document.getElementById('theme').addEventListener('click',()=>{
+    const next = root.getAttribute('data-theme')==='dark' ? 'light':'dark';
+    root.setAttribute('data-theme', next);
+    safe(()=>localStorage.setItem('theme', next));
+  });
+
+  // Menu mobile
+  const burger = document.getElementById('burger'), links = document.getElementById('links');
+  burger.addEventListener('click',()=>{const o=links.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+  links.addEventListener('click',e=>{if(e.target.tagName==='A'){links.classList.remove('open');burger.setAttribute('aria-expanded','false')}});
+
+  // Nav scroll + lien actif
+  const nav = document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('scrolled', window.scrollY>10);
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+  const secs=[...document.querySelectorAll('main section[id]')];
+  const linkMap={}; links.querySelectorAll('a').forEach(a=>linkMap[a.getAttribute('href').slice(1)]=a);
+  if('IntersectionObserver' in window){
+    const so=new IntersectionObserver(es=>es.forEach(e=>{
+      if(e.isIntersecting){Object.values(linkMap).forEach(a=>a.classList.remove('active'));linkMap[e.target.id]&&linkMap[e.target.id].classList.add('active')}
+    }),{rootMargin:'-45% 0px -50% 0px'});
+    secs.forEach(s=>so.observe(s));
+    const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}}),{threshold:.08});
+    document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+  } else document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));
+
+  // Filtres projets
+  document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.filter').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+    const f=b.dataset.f;
+    document.querySelectorAll('.project').forEach(p=>p.classList.toggle('hide', f!=='all' && !p.dataset.cat.split(' ').includes(f)));
+  }));
+
+  // Captures : placeholder auto si l'image n'existe pas
+  document.body.classList.toggle('hide-empty', HIDE_EMPTY_SHOTS);
+  document.querySelectorAll('.shot').forEach(fig=>{
+    const img=fig.querySelector('img');
+    const mark=()=>{fig.classList.add('empty'); img.remove()};
+    if(img.complete && img.naturalWidth===0) mark(); else img.addEventListener('error',mark,{once:true});
+  });
+
+  // Lightbox
+  const lb=document.getElementById('lb'), lbi=document.getElementById('lb-img'), lbc=document.getElementById('lb-cap');
+  document.addEventListener('click',e=>{
+    const fig=e.target.closest('.shot'); if(!fig||fig.classList.contains('empty')) return;
+    const img=fig.querySelector('img'); if(!img) return;
+    lbi.src=img.src; lbi.alt=img.alt; lbc.textContent=fig.querySelector('figcaption').innerText.replace(/\n+/g,' — ');
+    lb.classList.add('open');
+  });
+  const close=()=>{lb.classList.remove('open');lbi.src=''};
+  lb.addEventListener('click',e=>{if(e.target===lb||e.target.id==='lb-x')close()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+<script>
+(function(){
+
+  var scr=document.getElementById('screen'), cur=document.getElementById('cursor'), boot=document.getElementById('boot'), login=document.getElementById('login');
+  var run=0, reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(s){return scr.querySelector(s);}
+  function wait(ms,id){return new Promise(function(res,rej){setTimeout(function(){id===run?res():rej('stop');},ms);});}
+  function to(sel){ var el=typeof sel==='string'?$(sel):sel, a=el.getBoundingClientRect(), b=scr.getBoundingClientRect();
+    cur.style.left=((a.left-b.left+a.width*0.5)/b.width*100)+'%'; cur.style.top=((a.top-b.top+a.height*0.55)/b.height*100)+'%'; }
+  function click(el){ cur.classList.remove('click'); void cur.offsetWidth; cur.classList.add('click');
+    if(el){el.classList.add('press'); setTimeout(function(){el.classList.remove('press');},160);} }
+  function scene(n){ scr.querySelectorAll('.scene').forEach(function(s){s.classList.toggle('on',s.dataset.s===n);});
+    scr.querySelectorAll('.side button').forEach(function(b){b.classList.toggle('act',b.dataset.go===n);}); mark(n); }
+  function mark(n){ document.querySelectorAll('.steps [data-step]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.step===n);}); }
+  function resetBlock(){ $('#ok').classList.remove('on'); $('#nblk').textContent='1';
+    $('#state').innerHTML='<span class="pill" style="background:#f97316">À BLOQUER</span>'; }
+  function doneBlock(){ $('#ok').classList.add('on'); $('#nblk').textContent='2';
+    $('#state').innerHTML='<span class="pill" style="background:#166534">BLOQUÉ</span>'; }
+  function resetLogin(){ login.classList.remove('mfa'); ['#f-mail','#f-pw','#f-code'].forEach(function(s){$(s).textContent='';$(s).classList.remove('focus');}); }
+  async function type(sel,txt,id){ var f=$(sel); f.classList.add('focus'); for(var i=1;i<=txt.length;i++){ f.textContent=txt.slice(0,i); await wait(55,id);} f.classList.remove('focus'); }
+
+  async function play(){
+    var id=++run;
+    try{
+      while(id===run){
+        resetBlock(); resetLogin(); login.classList.add('on'); mark('login'); boot.classList.add('on');
+        await wait(1700,id); boot.classList.remove('on'); await wait(600,id);
+        to('#f-mail'); await wait(900,id); click(); await type('#f-mail','admin@ztna.ma',id);
+        to('#f-pw'); await wait(800,id); click(); await type('#f-pw','••••••••••',id);
+        to('#b-login'); await wait(900,id); click($('#b-login')); await wait(450,id);
+        login.classList.add('mfa'); await wait(500,id);
+        to('#f-code'); await wait(800,id); click(); await type('#f-code','342 113',id);
+        to('#b-verify'); await wait(850,id); click($('#b-verify')); await wait(450,id);
+        login.classList.remove('on'); scene('monitor'); await wait(900,id);
+        to('#row-dos'); await wait(2400,id);
+        to('.side [data-go="risk"]'); await wait(950,id); click(); await wait(250,id); scene('risk'); await wait(700,id);
+        to('#row-crit'); await wait(2400,id);
+        to('.side [data-go="block"]'); await wait(950,id); click(); await wait(250,id); scene('block'); await wait(900,id);
+        to('#apply'); await wait(1100,id); click($('#apply')); await wait(500,id); doneBlock(); await wait(3200,id);
+      }
+    }catch(e){}
+  }
+  function show(step){ run++; boot.classList.remove('on'); resetBlock(); resetLogin();
+    if(step==='login'){ login.classList.add('on'); $('#f-mail').textContent='admin@ztna.ma'; $('#f-pw').textContent='••••••••••'; mark('login'); to('#b-login'); }
+    else { login.classList.remove('on'); scene(step); if(step==='block'){doneBlock(); to('#apply');} else to(step==='risk'?'#row-crit':'#row-dos'); } }
+  document.querySelectorAll('.steps [data-step]').forEach(function(b){ b.addEventListener('click',function(){show(b.dataset.step);}); });
+  scr.querySelectorAll('.side button').forEach(function(b){ b.addEventListener('click',function(){show(b.dataset.go);}); });
+  document.getElementById('replay').addEventListener('click',play);
+  if(!reduced && 'IntersectionObserver' in window){
+    var started=false, io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting && !started){started=true; play();} }); },{threshold:.45});
+    io.observe(scr);
+  }
+
+})();
+</script>
+
+<script>
+(function(){
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function L(fr,en){return '<span class="fr">'+fr+'</span><span class="en">'+en+'</span>';}
+  function mk(root, scenes, reset){
+    var scr=root.querySelector('.screen,.pscreen'), cur=root.querySelector('.cursor'), run=0;
+    var api={
+      $:function(s){return root.querySelector(s);},
+      wait:function(ms){var id=run;return new Promise(function(res,rej){setTimeout(function(){id===run?res():rej('stop');},ms);});},
+      to:function(sel){var el=typeof sel==='string'?root.querySelector(sel):sel,a=el.getBoundingClientRect(),b=scr.getBoundingClientRect();
+        cur.style.left=((a.left-b.left+a.width*.5)/b.width*100)+'%';cur.style.top=((a.top-b.top+a.height*.6)/b.height*100)+'%';},
+      click:function(el){cur.classList.remove('click');void cur.offsetWidth;cur.classList.add('click');if(el){el.classList.add('press');setTimeout(function(){el.classList.remove('press');},160);}},
+      type:async function(el,txt,sp){el.classList.add('focus');for(var i=1;i<=txt.length;i++){el.textContent=txt.slice(0,i);await api.wait(sp||38);}el.classList.remove('focus');},
+      mark:function(i){root.querySelectorAll('.steps [data-step]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.step==i);});},
+      line:function(html){var o=root.querySelector('[data-out]');var d=document.createElement('div');d.innerHTML=html;o.appendChild(d);while(o.children.length>9)o.removeChild(o.firstChild);},
+      move:async function(pts,ms){var p=root.querySelector('.pkt');p.style.transition='none';p.style.left=pts[0][0]+'%';p.style.top=pts[0][1]+'%';void p.offsetWidth;p.style.transition='';p.classList.add('on');
+        for(var i=1;i<pts.length;i++){p.style.left=pts[i][0]+'%';p.style.top=pts[i][1]+'%';await api.wait(ms||720);}},
+      hide:function(){var p=root.querySelector('.pkt');if(p){p.classList.remove('on','red');}}
+    };
+    async function play(from){
+      run++; reset(api);
+      try{ for(;;){ for(var i=from||0;i<scenes.length;i++){ api.mark(i); await scenes[i](api); } from=0; await api.wait(1800); reset(api); await api.wait(500); } }catch(e){}
+    }
+    root.querySelectorAll('.steps [data-step]').forEach(function(b){b.addEventListener('click',function(){play(+b.dataset.step);});});
+    root.querySelector('[data-replay]').addEventListener('click',function(){play(0);});
+    if(reduced){reset(api);return;}
+    if('IntersectionObserver' in window){var st=false,io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!st){st=true;play(0);}});},{threshold:.4});io.observe(scr);}
+  }
+  function q(s){return document.querySelector('[data-demo="'+s+'"]');}
+
+  /* MPLS */
+  var MP={R1:[27,56],R4:[42,56],R5:[58,56],R3:[73,56],R2:[50,30],A1:[8,34],B1:[8,56],C1:[8,78],A2:[34,9],B2:[50,9],C2:[66,9],A3:[92,34],B3:[92,56],C3:[92,78]};
+  var IPS={A2:'192.168.2.1',A3:'192.168.3.1',B1:'172.16.0.1',B2:'172.17.0.1',B3:'172.18.0.1',C1:'172.31.1.1',C2:'172.31.2.1',C3:'172.31.3.1'};
+  var RT={A2:['A1','R1','R4','R2','A2'],A3:['A1','R1','R4','R5','R3','A3'],C3:['A1','R1','R4','R5','R3','C3']};
+  var m=q('mpls'); if(m){
+    function pth(a){return a.map(function(n){return MP[n];});}
+    function nodeEl(n){return m.querySelector('[data-n='+n+']');}
+    function clr(){m.querySelectorAll('.nd').forEach(function(n){n.classList.remove('hl','bad','on','okn');}); m.querySelector('.pkt').classList.remove('lock','red');}
+    function head(d,fr,en){var st=d.$('.st'); st.className='st'; st.innerHTML=L(fr,en); nodeEl('A1').classList.add('on');}
+    async function ping(d,dst){
+      var ok=!!RT[dst];
+      d.line('<b>R6#</b>ping '+IPS[dst]+' <span style="opacity:.6">('+dst+')</span>'); await d.wait(350);
+      if(ok){ await d.move(pth(RT[dst]),330); d.hide(); nodeEl(dst).classList.add('okn'); d.line('<span class="g">!!!!! 100 %</span>'); }
+      else { await d.move(pth(['A1','R1']),480); m.querySelector('.pkt').classList.add('red'); await d.wait(420); d.hide(); nodeEl(dst).classList.add('bad'); d.line('<span class="r">..... 0 %</span>'); }
+      await d.wait(450);
+    }
+    function fin(d,cls,fr,en){var st=d.$('.st'); st.className='st '+cls; st.innerHTML=L(fr,en); return d.wait(1700);}
+    mk(m,[
+      async function(d){ head(d,'A1 → client A','A1 → customer A'); await ping(d,'A2'); await ping(d,'A3'); await fin(d,'g','A1 joint tout le client A','A1 reaches all of customer A'); },
+      async function(d){ head(d,'A1 → C3 (extranet)','A1 → C3 (extranet)'); await ping(d,'C3'); await fin(d,'g','Extranet : A1 joint C3','Extranet: A1 reaches C3'); },
+      async function(d){ head(d,'A1 → client B','A1 → customer B'); await ping(d,'B1'); await ping(d,'B2'); await ping(d,'B3'); await fin(d,'r','A1 ne joint aucun site du client B','A1 reaches no site of customer B'); },
+      async function(d){ head(d,'A1 → C1, C2','A1 → C1, C2'); await ping(d,'C1'); await ping(d,'C2');
+        await fin(d,'g','A1 joint A2, A3 et C3 seulement','A1 reaches only A2, A3 and C3'); await d.wait(1600); }
+    ],function(d){ clr(); d.$('[data-out]').innerHTML=''; d.hide(); var st=d.$('.st'); st.className='st'; st.innerHTML='MPLS L3VPN · 3 PE · 2 P · 9 CE'; });
+  }
+
+  /* HA */
+  var LAN=[10,50],R1=[34,26],R2=[34,74],SB=[90,50];
+  var h=q('ha'); if(h) mk(h,[
+    async function(d){ var st=d.$('.st'); st.className='st g'; st.innerHTML=L('IP SLA : lien principal joignable','IP SLA: primary link reachable');
+      h.querySelector('[data-l2=main]').classList.add('ok'); h.querySelector('[data-l2=l1]').classList.add('ok');
+      d.line(L('<span class="g">IP SLA 1 : OK</span>','<span class="g">IP SLA 1: OK</span>')); d.line('VRRP : <b>R1 Master</b>');
+      await d.move([LAN,R1,SB]); await d.move([LAN,R1,SB]); d.hide(); await d.wait(700); },
+    async function(d){ var st=d.$('.st'); var l=h.querySelector('[data-l2=main]'); l.classList.remove('ok'); l.classList.add('down');
+      st.className='st r'; st.innerHTML=L('IP SLA : lien principal en panne','IP SLA: primary link down');
+      d.line(L('<span class="r">IP SLA 1 : Timeout</span>','<span class="r">IP SLA 1: Timeout</span>')); await d.wait(900);
+      d.line(L('<span class="r">Track 1 : Down</span>','<span class="r">Track 1: Down</span>')); await d.wait(1500); },
+    async function(d){ var st=d.$('.st'); var r1=d.$('[data-n=R1]'), r2=d.$('[data-n=R2]');
+      r1.classList.remove('hl'); r1.querySelector('small').textContent='VRRP Backup'; r2.classList.add('hl'); r2.querySelector('small').textContent='VRRP Master';
+      h.querySelector('[data-l2=l1]').classList.remove('ok'); h.querySelector('[data-l2=l2]').classList.add('ok'); h.querySelector('[data-l2=tun]').classList.add('ok');
+      d.line('VRRP : <b>R2 Master</b>'); d.line(L('<span class="g">Trafic → tunnel IPsec</span>','<span class="g">Traffic → IPsec tunnel</span>'));
+      st.className='st g'; st.innerHTML=L('Basculement automatique vers IPsec','Automatic failover to IPsec');
+      await d.move([LAN,R2,SB]); await d.move([LAN,R2,SB]); d.hide(); await d.wait(1600); }
+  ],function(d){ h.querySelectorAll('line').forEach(function(l){l.classList.remove('ok','down');});
+    var r1=d.$('[data-n=R1]'), r2=d.$('[data-n=R2]'); r1.classList.add('hl'); r1.querySelector('small').textContent='VRRP Master'; r2.classList.remove('hl'); r2.querySelector('small').textContent='VRRP Backup';
+    d.$('[data-out]').innerHTML=''; d.hide(); var st=d.$('.st'); st.className='st'; st.innerHTML='IP SLA'; });
+
+
+  /* Fekra */
+  var k=q('fekra'); if(k){
+    async function cmds(d,list){ for(var i=0;i<list.length;i++){ d.line(list[i]); await d.wait(520); } }
+    var P='<b>stage_test(config)#</b> ', PL='<b>stage_test(config-line)#</b> ', PI='<b>stage_test(config-if)#</b> ', PV='<b>stage_test(config-vlan)#</b> ';
+    mk(k,[
+      async function(d){ var st=d.$('.st'); st.className='st'; st.innerHTML=L('Sécurisation du switch','Hardening the switch');
+        await cmds(d,['<b>Switch(config)#</b> hostname stage_test', P+'enable secret ********', P+'line console 0', PL+'password ********', PL+'login', P+'line vty 0 15', PL+'password ********', P+'service password-encryption']);
+        d.$('[data-n=SW] small').textContent='🔒 '+(document.documentElement.lang==='en'?'password-protected':'accès protégé');
+        st.className='st g'; st.innerHTML=L('Accès console et distant protégés par mot de passe','Console and remote access password-protected'); await d.wait(2200); },
+      async function(d){ var st=d.$('.st'); st.className='st'; st.innerHTML=L('Adresse de gestion','Management address'); d.$('[data-out]').innerHTML='';
+        await cmds(d,[P+'interface vlan 1', PI+'ip address 192.168.0.2 255.255.255.0', PI+'no shutdown', PI+'exit', P+'ip default-gateway 192.168.0.1']);
+        d.$('[data-n=SW] small').textContent='192.168.0.2'; k.querySelector('[data-l2=rt]').classList.add('ok');
+        st.className='st g'; st.innerHTML=L('Switch joignable : 192.168.0.2 · passerelle 192.168.0.1','Switch reachable: 192.168.0.2 · gateway 192.168.0.1'); await d.wait(2200); },
+      async function(d){ var st=d.$('.st'); st.className='st'; st.innerHTML=L('VLANs statiques','Static VLANs'); d.$('[data-out]').innerHTML='';
+        await cmds(d,[P+'vlan 20', PV+'name Administration', PV+'exit', P+'interface fastEthernet 0/10', PI+'switchport mode access', PI+'switchport access vlan 20', PI+'end']);
+        d.$('[data-n=SW] small').textContent='VLAN 20 · Fa0/10';
+        st.className='st g'; st.innerHTML=L('Port Fa0/10 affecté au VLAN 20 « Administration »','Port Fa0/10 assigned to VLAN 20 “Administration”'); await d.wait(2800); }
+    ],function(d){ d.$('[data-out]').innerHTML=''; d.$('[data-n=SW] small').textContent='switch 2960'; k.querySelectorAll('line').forEach(function(l){l.classList.remove('ok');});
+      var st=d.$('.st'); st.className='st'; st.innerHTML=L('Switch à configurer','Switch to configure'); });
+  }
+
+  /* Boutique */
+  var s=q('shop'); if(s) mk(s,[
+    async function(d){ var en=document.documentElement.lang==='en';
+      d.to('[data-q]'); await d.wait(900); d.click();
+      await d.type(d.$('[data-q]'), en?'white sneakers under 500 MAD':'des chaussures de sport blanches à moins de 500 DH');
+      d.to('[data-go]'); await d.wait(800); d.click(d.$('[data-go]')); await d.wait(500); },
+    async function(d){ d.$('[data-und]').classList.add('on'); await d.wait(700);
+      var ps=s.querySelectorAll('.prod'); for(var i=0;i<ps.length;i++){ps[i].classList.add('on'); await d.wait(280);}
+      d.to(ps[0]); await d.wait(2600); }
+  ],function(d){ d.$('[data-q]').textContent=''; d.$('[data-und]').classList.remove('on'); s.querySelectorAll('.prod').forEach(function(p){p.classList.remove('on');}); });
+
+  /* Freelance */
+  var f=q('free'); if(f){
+    function add(d,list,title,sub){ var it=document.createElement('div'); it.className='it new'; it.innerHTML=title+'<small>'+sub+'</small>'; var l=d.$(list); l.insertBefore(it,l.firstChild); }
+    async function flow(d,btn,mt,txt,list,title,sub){
+      d.to(btn); await d.wait(900); d.click(d.$(btn)); await d.wait(350);
+      d.$('[data-mt]').innerHTML=mt; d.$('[data-mf]').textContent=''; d.$('[data-modal]').classList.add('on'); await d.wait(500);
+      d.to('[data-mf]'); await d.wait(700); d.click(); await d.type(d.$('[data-mf]'),txt,45);
+      d.to('[data-mb]'); await d.wait(700); d.click(d.$('[data-mb]')); await d.wait(350);
+      d.$('[data-modal]').classList.remove('on'); await d.wait(300); add(d,list,title,sub); await d.wait(1900); }
+    mk(f,[
+      function(d){ var en=document.documentElement.lang==='en';
+        return flow(d,'[data-b1]',L('Publier un service','Publish a service'),en?'Website creation':'Création de site web','[data-l1]',L('Création de site web','Website creation'),L('Freelance · Web','Freelancer · Web')); },
+      function(d){ var en=document.documentElement.lang==='en';
+        return flow(d,'[data-b2]',L('Poster un projet','Post a project'),en?'Mobile application':'Application mobile','[data-l2b]',L('Application mobile','Mobile application'),L('Client · Mobile','Client · Mobile')); }
+    ],function(d){ f.querySelectorAll('.it.new').forEach(function(x){x.remove();}); d.$('[data-modal]').classList.remove('on'); });
+  }
+
+  /* Téléphone */
+  var p=q('phone'); if(p) mk(p,[
+    async function(d){ d.to('[data-s2]'); await d.wait(1000); d.click(); d.$('[data-s2]').classList.add('sel'); await d.wait(900); },
+    async function(d){ d.to('[data-pb]'); await d.wait(900); d.click(d.$('[data-pb]')); var r=d.$('[data-ring]'); r.className='ring wait'; r.innerHTML=L('Connexion…','Connecting…');
+      d.$('[data-msg]').innerHTML=L('Génération du fichier de configuration…','Generating the configuration file…'); await d.wait(1300);
+      d.$('[data-msg]').innerHTML='client.ovpn ✓'; await d.wait(900); },
+    async function(d){ var r=d.$('[data-ring]'); r.className='ring ok'; r.innerHTML=L('Connecté','Connected'); d.$('[data-pb]').innerHTML=L('Se déconnecter','Disconnect');
+      d.$('[data-msg]').innerHTML=L('Tunnel OpenVPN établi','OpenVPN tunnel established'); await d.wait(2800); }
+  ],function(d){ var r=d.$('[data-ring]'); r.className='ring'; r.innerHTML=L('Déconnecté','Disconnected'); d.$('[data-s2]').classList.remove('sel'); d.$('[data-msg]').innerHTML=''; d.$('[data-pb]').innerHTML=L('Se connecter','Connect'); });
+})();
+</script>
+
+</body>
+</html>
